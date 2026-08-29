@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import List, Optional
 from datetime import datetime
+from backend.app.services.cost_detector import cost_detector_service
 
 app = FastAPI(
     title="e-SAKSHI Forensic Intelligence Engine API",
@@ -10,7 +11,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS for frontend integration (Flutter / React / Streamlit)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -18,8 +18,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# ----------------- Data Models -----------------
 
 class ProjectSanctionRequest(BaseModel):
     project_id: str = Field(..., example="MPLAD-2026-1045")
@@ -32,28 +30,16 @@ class ProjectSanctionRequest(BaseModel):
 
 class FraudAlert(BaseModel):
     alert_type: str
-    severity: str  # LOW, MEDIUM, HIGH, CRITICAL
+    severity: str
     description: str
 
 class RiskAssessmentResponse(BaseModel):
     project_id: str
-    overall_risk_score: int  # 0 to 100
-    risk_level: str          # LOW, MEDIUM, HIGH, CRITICAL
+    overall_risk_score: int
+    risk_level: str
     action_recommended: str
     alerts: List[FraudAlert]
     timestamp: str
-
-# ----------------- Mock Baseline Stats -----------------
-
-# Baseline median costs for quick validation (will be replaced by ML model)
-BENCHMARK_COSTS = {
-    "Solar Street Light": 75000.0,
-    "Community Hall": 1500000.0,
-    "Drinking Water Plant": 500000.0,
-    "School Boundary Wall": 300000.0
-}
-
-# ----------------- API Endpoints -----------------
 
 @app.get("/")
 def health_check():
@@ -66,37 +52,31 @@ def health_check():
 @app.post("/api/v1/detect-fraud", response_model=RiskAssessmentResponse)
 def analyze_project_fraud(project: ProjectSanctionRequest):
     alerts = []
-    risk_score = 10  # Baseline low risk
+    risk_score = 10
 
-    # 1. Cost Outlier Check
-    benchmark = BENCHMARK_COSTS.get(project.work_category, 500000.0)
-    cost_ratio = project.sanctioned_amount_inr / benchmark
+    # 1. AI-Driven Cost Anomaly Detection
+    ml_result = cost_detector_service.predict_cost_anomaly(
+        work_category=project.work_category,
+        sanctioned_amount=project.sanctioned_amount_inr
+    )
 
-    if cost_ratio > 3.0:
-        risk_score += 50
+    if ml_result["is_anomaly"] or ml_result["cost_ratio"] >= 2.0:
+        risk_score += 55
         alerts.append(FraudAlert(
-            alert_type="COST_INFLATION_OUTLIER",
-            severity="CRITICAL",
-            description=f"Sanctioned amount (₹{project.sanctioned_amount_inr:,.0f}) is {cost_ratio:.1f}x higher than the district median benchmark (₹{benchmark:,.0f})."
-        ))
-    elif cost_ratio > 1.5:
-        risk_score += 25
-        alerts.append(FraudAlert(
-            alert_type="COST_DEVIATION",
-            severity="MEDIUM",
-            description=f"Sanctioned amount is {cost_ratio:.1f}x higher than standard benchmark."
+            alert_type="ML_ISOLATION_FOREST_OUTLIER",
+            severity="CRITICAL" if ml_result["cost_ratio"] >= 3.0 else "HIGH",
+            description=f"Isolation Forest flagged cost as statistical outlier. Sanctioned amount (₹{project.sanctioned_amount_inr:,.0f}) is {ml_result['cost_ratio']}x the historical median (₹{ml_result['category_median']:,.0f})."
         ))
 
-    # 2. Split Tender / Threshold Evasion Check (< ₹10 Lakhs heuristic)
+    # 2. Split Tender Heuristic (< ₹10 Lakhs Threshold Evasion)
     if 900000.0 <= project.sanctioned_amount_inr < 1000000.0:
         risk_score += 25
         alerts.append(FraudAlert(
             alert_type="TENDER_SPLITTING_HEURISTIC",
             severity="HIGH",
-            description="Sanction amount sits just below the ₹10 Lakh mandatory open tender threshold. Flagged for semantic duplicate audit."
+            description="Sanction amount is strategically situated between ₹9 Lakh and ₹10 Lakh to evade standard statutory audit thresholds."
         ))
 
-    # Determine risk category
     risk_score = min(risk_score, 100)
     if risk_score >= 75:
         risk_level = "CRITICAL"
