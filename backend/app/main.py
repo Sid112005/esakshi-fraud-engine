@@ -5,6 +5,8 @@ from typing import List, Optional
 from datetime import datetime
 from backend.app.services.cost_detector import cost_detector_service
 from backend.app.services.budget_verifier import budget_verifier_service
+from backend.app.services.collusion_detector import collusion_detector_service
+from backend.app.services.graph_service import cartel_graph_service
 
 app = FastAPI(
     title="e-SAKSHI Forensic Intelligence Engine API",
@@ -105,6 +107,34 @@ def analyze_project_fraud(project: ProjectSanctionRequest):
             alert_type="HIGH_CAPITAL_CONCENTRATION",
             severity="LOW",
             description=f"Single work consumes {budget_result['draw_percentage']}% of the MP's total multi-year fund."
+        ))
+
+    # 4. Implementing Agency Collusion Check
+    collusion_result = collusion_detector_service.check_agency_risk(
+        implementing_agency=project.implementing_agency,
+        district=project.district
+    )
+
+    if collusion_result["collusion_suspected"]:
+        risk_score += 20
+        for flag in collusion_result["flags"]:
+            alerts.append(FraudAlert(
+                alert_type=flag["type"],
+                severity="MEDIUM",
+                description=flag["message"]
+            ))
+
+    # 5. Graph Network Cartel Check
+    graph_result = cartel_graph_service.check_cartel_rings(
+        implementing_agency=project.implementing_agency
+    )
+
+    if graph_result.get("cartel_detected"):
+        risk_score += 30
+        alerts.append(FraudAlert(
+            alert_type="GRAPH_CARTEL_RING",
+            severity="CRITICAL",
+            description="Entity shares confidential attributes with blacklisted shell syndicates."
         ))
 
     risk_score = min(risk_score, 100)
