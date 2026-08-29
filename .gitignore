@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ignore SQLite Database Files
+*.db
+*.sqlite3
+
+# Ignore Machine Learning Models
+*.joblib
+*.pkl
