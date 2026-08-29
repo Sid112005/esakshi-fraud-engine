@@ -1,0 +1,1083 @@
+project_id,district,work_category,sanctioned_amount_inr,implementing_agency,sanction_date,fraud_label,fraud_type
+MPLAD-BF630C,Nagpur,Drinking Water Plant,476413.44,Contractor_15,2025-02-21,0,None
+MPLAD-A66941,Thane,School Boundary Wall,289056.77,Contractor_48,2025-11-01,0,None
+MPLAD-D5EE5C,Nagpur,Solar Street Light,67024.95,Contractor_36,2025-05-25,0,None
+MPLAD-10E3BA,Palghar,Drinking Water Plant,497001.16,Contractor_12,2025-09-06,0,None
+MPLAD-73C7B7,Thane,School Boundary Wall,295866.89,Contractor_4,2025-06-20,0,None
+MPLAD-CCBE0F,Thane,School Boundary Wall,279588.58,Contractor_9,2025-04-08,0,None
+MPLAD-C665D4,Palghar,Road Repair,747421.97,Contractor_10,2025-07-10,0,None
+MPLAD-A7C069,Thane,Community Hall,1533149.48,Contractor_6,2025-01-19,0,None
+MPLAD-981CC7,Palghar,Drinking Water Plant,502321.89,Contractor_33,2025-01-27,0,None
+MPLAD-AEBD62,Nashik,School Boundary Wall,329625.57,Contractor_28,2025-07-03,0,None
+MPLAD-6B1277,Nagpur,Community Hall,1690393.12,Contractor_33,2025-04-05,0,None
+MPLAD-B19D1D,Pune,Solar Street Light,69270.71,Contractor_38,2025-01-12,0,None
+MPLAD-038B62,Nashik,Solar Street Light,81059.63,Contractor_28,2025-04-03,0,None
+MPLAD-1A077B,Palghar,Solar Street Light,73647.73,Contractor_22,2025-12-18,0,None
+MPLAD-FE77A1,Thane,Community Hall,1379947.38,Contractor_1,2025-02-09,0,None
+MPLAD-9CCF75,Nashik,Drinking Water Plant,524783.12,Contractor_1,2025-03-18,0,None
+MPLAD-37D63B,Thane,Solar Street Light,68254.1,Contractor_10,2025-01-24,0,None
+MPLAD-4B5EA7,Palghar,Community Hall,1606163.9,Contractor_1,2025-08-20,0,None
+MPLAD-B7124A,Palghar,School Boundary Wall,278893.73,Contractor_32,2025-11-08,0,None
+MPLAD-7D7562,Nagpur,Community Hall,1432810.36,Contractor_37,2025-09-12,0,None
+MPLAD-A87B4C,Palghar,Drinking Water Plant,521281.61,Contractor_49,2025-05-27,0,None
+MPLAD-6A03A3,Pune,Road Repair,736396.96,Contractor_8,2025-08-14,0,None
+MPLAD-8C1C38,Thane,Solar Street Light,81879.49,Contractor_50,2025-08-02,0,None
+MPLAD-88EEFA,Nashik,Community Hall,1504680.5,Contractor_36,2025-02-13,0,None
+MPLAD-01FB98,Nagpur,School Boundary Wall,316537.19,Contractor_30,2025-05-24,0,None
+MPLAD-36298A,Palghar,School Boundary Wall,308316.84,Contractor_16,2025-04-23,0,None
+MPLAD-B03AE6,Thane,Solar Street Light,70354.41,Contractor_12,2025-09-03,0,None
+MPLAD-30A813,Pune,Community Hall,1561557.14,Contractor_33,2025-02-25,0,None
+MPLAD-0D1C0D,Thane,School Boundary Wall,300082.07,Contractor_47,2025-02-28,0,None
+MPLAD-B409B8,Pune,School Boundary Wall,271555.18,Contractor_9,2025-02-13,0,None
+MPLAD-7D2AD2,Nashik,Road Repair,811684.79,Contractor_45,2025-07-23,0,None
+MPLAD-552A81,Nashik,Road Repair,835484.1,Contractor_48,2025-08-17,0,None
+MPLAD-11C573,Palghar,Road Repair,743029.73,Contractor_13,2025-08-05,0,None
+MPLAD-269412,Nagpur,Road Repair,853108.2,Contractor_26,2025-10-24,0,None
+MPLAD-8F898E,Nashik,School Boundary Wall,290247.16,Contractor_34,2025-02-18,0,None
+MPLAD-DBADE4,Nagpur,Community Hall,1492259.78,Contractor_18,2025-11-14,0,None
+MPLAD-893857,Palghar,Community Hall,1502776.58,Contractor_29,2025-12-19,0,None
+MPLAD-37568D,Thane,Solar Street Light,84779.73,Contractor_31,2025-08-10,0,None
+MPLAD-EBB585,Pune,Drinking Water Plant,459183.12,Contractor_33,2025-09-13,0,None
+MPLAD-ED9DAE,Thane,Road Repair,700982.72,Contractor_1,2025-11-11,0,None
+MPLAD-1467BB,Palghar,School Boundary Wall,299769.97,Contractor_20,2025-03-26,0,None
+MPLAD-B67A10,Palghar,Community Hall,1336095.19,Contractor_4,2025-03-15,0,None
+MPLAD-CA9D0F,Nagpur,Community Hall,1546331.71,Contractor_32,2025-10-12,0,None
+MPLAD-174A9D,Pune,Community Hall,1428798.84,Contractor_48,2025-05-07,0,None
+MPLAD-2EDF36,Thane,Drinking Water Plant,549239.01,Contractor_11,2025-11-09,0,None
+MPLAD-03DF47,Nashik,Drinking Water Plant,474010.51,Contractor_40,2025-10-25,0,None
+MPLAD-2EB182,Nashik,Drinking Water Plant,466814.32,Contractor_45,2025-01-14,0,None
+MPLAD-5981A6,Nagpur,Community Hall,1454817.98,Contractor_24,2025-12-03,0,None
+MPLAD-29E16F,Palghar,Road Repair,876684.76,Contractor_17,2025-10-03,0,None
+MPLAD-CBAE78,Thane,Community Hall,1383273.94,Contractor_25,2025-09-04,0,None
+MPLAD-AB9401,Palghar,Solar Street Light,73149.43,Contractor_4,2025-01-18,0,None
+MPLAD-EAB6AD,Palghar,Solar Street Light,75070.46,Contractor_6,2025-12-06,0,None
+MPLAD-2625A2,Palghar,Drinking Water Plant,2051319.83,Contractor_29,2025-03-21,1,Cost Inflation
+MPLAD-A874CE,Nagpur,Community Hall,1458154.26,Contractor_43,2025-07-20,0,None
+MPLAD-B912E0,Nagpur,Solar Street Light,79056.47,Contractor_25,2025-10-04,0,None
+MPLAD-8954C8,Nashik,Community Hall,1437434.73,Contractor_33,2025-06-11,0,None
+MPLAD-D8F34C,Nashik,School Boundary Wall,322078.02,Contractor_5,2025-11-20,0,None
+MPLAD-947D7B,Nashik,Community Hall,1432505.11,Contractor_29,2025-01-13,0,None
+MPLAD-8EDC04,Nashik,Community Hall,1310192.96,Contractor_26,2025-11-07,0,None
+MPLAD-1EA82C,Nashik,Road Repair,806506.62,Contractor_7,2025-07-25,0,None
+MPLAD-7ACE57,Thane,Road Repair,791062.03,Contractor_25,2025-09-16,0,None
+MPLAD-3ABB6F,Palghar,School Boundary Wall,313516.56,Contractor_34,2025-05-11,0,None
+MPLAD-1A9E45,Thane,Solar Street Light,71228.15,Contractor_32,2025-08-23,0,None
+MPLAD-D992AD,Thane,Community Hall,1363407.76,Contractor_42,2025-06-25,0,None
+MPLAD-6C4540,Pune,Road Repair,781684.66,Contractor_23,2025-08-14,0,None
+MPLAD-6898A0,Pune,Drinking Water Plant,510177.41,Contractor_42,2025-01-23,0,None
+MPLAD-090777,Thane,Solar Street Light,77091.5,Contractor_3,2025-06-08,0,None
+MPLAD-C43188,Nagpur,Community Hall,1614257.94,Contractor_49,2025-01-20,0,None
+MPLAD-8F2BEC,Nashik,Drinking Water Plant,507915.09,Contractor_49,2025-11-09,0,None
+MPLAD-C89E91,Palghar,Community Hall,1375613.52,Contractor_38,2025-06-26,0,None
+MPLAD-0E0D0D,Thane,Drinking Water Plant,522238.73,Contractor_49,2025-11-21,0,None
+MPLAD-AE7528,Palghar,School Boundary Wall,295894.74,Contractor_10,2025-12-31,0,None
+MPLAD-9E8AEB,Nashik,Road Repair,829092.72,Contractor_27,2025-12-17,0,None
+MPLAD-B93F2B,Nagpur,Drinking Water Plant,453577.7,Contractor_30,2025-03-01,0,None
+MPLAD-2A3390,Palghar,Solar Street Light,81330.42,Contractor_46,2025-02-18,0,None
+MPLAD-B9296E,Palghar,Community Hall,5217526.66,Contractor_44,2025-11-18,1,Cost Inflation
+MPLAD-A31E58,Palghar,Solar Street Light,78912.57,Contractor_23,2025-08-21,0,None
+MPLAD-6619AF,Nashik,Drinking Water Plant,548016.33,Contractor_33,2025-01-19,0,None
+MPLAD-6064DE,Pune,School Boundary Wall,306549.52,Contractor_8,2025-07-18,0,None
+MPLAD-EB5DFB,Thane,Solar Street Light,77122.52,Contractor_49,2025-02-16,0,None
+MPLAD-9B2766,Nashik,School Boundary Wall,293863.61,Contractor_48,2025-02-21,0,None
+MPLAD-A49510,Palghar,Solar Street Light,73492.54,Contractor_44,2025-12-19,0,None
+MPLAD-25A0D1,Palghar,Solar Street Light,83641.44,Contractor_32,2025-12-05,0,None
+MPLAD-D180CE,Nashik,Community Hall,1408311.82,Contractor_37,2025-04-25,0,None
+MPLAD-B860EB,Nagpur,Solar Street Light,84051.91,Contractor_12,2025-01-25,0,None
+MPLAD-DE5CC7,Pune,School Boundary Wall,313507.85,Contractor_38,2025-07-24,0,None
+MPLAD-2D8260,Palghar,School Boundary Wall,270979.81,Contractor_29,2025-02-17,0,None
+MPLAD-BAAF13,Nashik,Drinking Water Plant,485439.43,Contractor_38,2025-09-01,0,None
+MPLAD-149CB6,Palghar,School Boundary Wall,289060.57,Contractor_39,2025-08-24,0,None
+MPLAD-F46FD5,Pune,Solar Street Light,74258.28,Contractor_21,2025-05-21,0,None
+MPLAD-1D2FEE,Palghar,Solar Street Light,72628.91,Contractor_9,2025-01-21,0,None
+MPLAD-D7C2AB,Nagpur,Road Repair,769856.71,Contractor_17,2025-06-10,0,None
+MPLAD-713DC6,Nashik,Road Repair,767715.32,Contractor_30,2025-01-28,0,None
+MPLAD-AC9B19,Palghar,Solar Street Light,68553.87,Contractor_36,2025-04-17,0,None
+MPLAD-BFCE6D,Thane,Road Repair,840704.32,Contractor_48,2025-02-26,0,None
+MPLAD-85C678,Nagpur,School Boundary Wall,271864.57,Contractor_46,2025-03-06,0,None
+MPLAD-7DE1CA,Pune,Road Repair,899925.31,Contractor_33,2025-02-12,0,None
+MPLAD-4B94BE,Nashik,Road Repair,744084.99,Contractor_12,2025-01-03,0,None
+MPLAD-720B70,Nashik,School Boundary Wall,271272.71,Contractor_40,2025-02-13,0,None
+MPLAD-779724,Pune,Drinking Water Plant,549766.72,Contractor_10,2025-09-18,0,None
+MPLAD-820617,Thane,Drinking Water Plant,529593.32,Contractor_46,2025-04-29,0,None
+MPLAD-28AEDE,Palghar,Drinking Water Plant,535741.39,Contractor_43,2025-08-08,0,None
+MPLAD-B9F21B,Nashik,Solar Street Light,66950.63,Contractor_8,2025-09-13,0,None
+MPLAD-BB9806,Pune,Community Hall,1645568.7,Contractor_39,2025-01-05,0,None
+MPLAD-2306D8,Thane,Drinking Water Plant,483032.34,Contractor_15,2025-09-30,0,None
+MPLAD-4FA926,Thane,Community Hall,1627982.08,Contractor_11,2025-01-25,0,None
+MPLAD-0F14E3,Nagpur,School Boundary Wall,299450.98,Contractor_33,2025-12-28,0,None
+MPLAD-31F605,Nagpur,Solar Street Light,73251.36,Contractor_36,2025-08-03,0,None
+MPLAD-9A6B25,Thane,Drinking Water Plant,498891.36,Contractor_1,2025-11-18,0,None
+MPLAD-FC44EF,Thane,Community Hall,1410547.69,Contractor_21,2025-03-25,0,None
+MPLAD-E38ABF,Pune,Community Hall,1436131.83,Contractor_6,2025-08-11,0,None
+MPLAD-C76CDA,Thane,Solar Street Light,71098.39,Contractor_40,2025-04-18,0,None
+MPLAD-43ECD4,Nagpur,Community Hall,1376218.1,Contractor_37,2025-05-12,0,None
+MPLAD-C55AF2,Palghar,Solar Street Light,78757.45,Contractor_30,2025-06-07,0,None
+MPLAD-910E91,Nagpur,Road Repair,839370.42,Contractor_33,2025-08-19,0,None
+MPLAD-B59D93,Nashik,Community Hall,1441172.72,Contractor_16,2025-02-09,0,None
+MPLAD-8F5BC3,Nagpur,Community Hall,1491824.94,Contractor_2,2025-05-07,0,None
+MPLAD-F35D7D,Thane,Drinking Water Plant,472419.01,Contractor_46,2025-01-30,0,None
+MPLAD-BEE6BD,Nagpur,Community Hall,1379450.32,Contractor_33,2025-02-27,0,None
+MPLAD-A88E2C,Thane,Community Hall,1584305.69,Contractor_16,2025-03-12,0,None
+MPLAD-D969F3,Pune,Road Repair,798653.01,Contractor_17,2025-12-27,0,None
+MPLAD-CAEFAB,Nagpur,Road Repair,711986.8,Contractor_14,2025-04-11,0,None
+MPLAD-0EDAB1,Nashik,School Boundary Wall,309971.54,Contractor_14,2025-12-29,0,None
+MPLAD-6EC091,Thane,School Boundary Wall,297863.1,Contractor_40,2025-10-11,0,None
+MPLAD-2E0A12,Thane,Drinking Water Plant,462023.52,Contractor_26,2025-05-06,0,None
+MPLAD-E529C1,Nashik,Drinking Water Plant,475122.58,Contractor_34,2025-05-23,0,None
+MPLAD-27E3A8,Nagpur,Community Hall,1594717.72,Contractor_36,2025-12-12,0,None
+MPLAD-AEEFC8,Nagpur,Road Repair,714909.28,Contractor_28,2025-06-22,0,None
+MPLAD-853A7D,Thane,Community Hall,1456517.93,Contractor_1,2025-11-10,0,None
+MPLAD-0B3EFF,Palghar,Community Hall,1443307.79,Contractor_7,2025-04-04,0,None
+MPLAD-B5589D,Nagpur,Road Repair,882784.76,Contractor_18,2025-11-02,0,None
+MPLAD-71E3F4,Nagpur,School Boundary Wall,312500.66,Contractor_19,2025-11-04,0,None
+MPLAD-E165C5,Nagpur,Drinking Water Plant,526701.85,Contractor_50,2025-10-22,0,None
+MPLAD-889CEC,Nashik,Solar Street Light,67037.23,Contractor_1,2025-07-03,0,None
+MPLAD-FF1761,Nashik,Solar Street Light,83594.52,Contractor_9,2025-05-21,0,None
+MPLAD-C5541D,Nashik,Solar Street Light,73451.34,Contractor_4,2025-12-01,0,None
+MPLAD-FCAFC2,Pune,Road Repair,883569.91,Contractor_21,2025-12-24,0,None
+MPLAD-2C704C,Pune,Drinking Water Plant,534315.0,Contractor_37,2025-11-29,0,None
+MPLAD-C68D7D,Thane,Road Repair,834608.7,Contractor_9,2025-12-28,0,None
+MPLAD-104EB5,Thane,Drinking Water Plant,534098.44,Contractor_37,2025-07-18,0,None
+MPLAD-794D99,Nagpur,School Boundary Wall,324326.2,Contractor_20,2025-05-07,0,None
+MPLAD-02BA62,Thane,Solar Street Light,74108.01,Contractor_9,2025-03-19,0,None
+MPLAD-716F07,Pune,Drinking Water Plant,540282.44,Contractor_29,2025-08-12,0,None
+MPLAD-C3AF82,Thane,Drinking Water Plant,530911.43,Contractor_46,2025-11-06,0,None
+MPLAD-469644,Nagpur,Community Hall,1412366.1,Contractor_22,2025-11-19,0,None
+MPLAD-17CB31,Nagpur,Community Hall,1489904.72,Contractor_39,2025-07-21,0,None
+MPLAD-DE64BE,Palghar,School Boundary Wall,286163.4,Contractor_20,2025-01-06,0,None
+MPLAD-64E746,Thane,Solar Street Light,72684.83,Contractor_38,2025-06-22,0,None
+MPLAD-7BD92A,Thane,Community Hall,1465992.65,Contractor_1,2025-12-23,0,None
+MPLAD-67E589,Thane,Community Hall,1538467.63,Contractor_13,2025-02-27,0,None
+MPLAD-5FFE26,Thane,School Boundary Wall,925138.81,Contractor_22,2025-07-05,1,Cost Inflation
+MPLAD-425C1B,Thane,Drinking Water Plant,532726.29,Contractor_45,2025-01-11,0,None
+MPLAD-4F30CD,Nashik,School Boundary Wall,290941.77,Contractor_11,2025-10-27,0,None
+MPLAD-B54F25,Nashik,Road Repair,857774.71,Contractor_50,2025-10-03,0,None
+MPLAD-A799E1,Nashik,Solar Street Light,67581.29,Contractor_20,2025-11-26,0,None
+MPLAD-9CD5A2,Thane,Solar Street Light,69551.46,Contractor_16,2025-03-11,0,None
+MPLAD-524939,Palghar,Solar Street Light,302119.5,Contractor_43,2025-10-16,1,Cost Inflation
+MPLAD-36211E,Nagpur,School Boundary Wall,312213.6,Contractor_2,2025-07-28,0,None
+MPLAD-B9885C,Nagpur,Community Hall,1369360.19,Contractor_41,2025-10-06,0,None
+MPLAD-2FDD81,Palghar,Community Hall,1423325.33,Contractor_39,2025-04-29,0,None
+MPLAD-CEA8E8,Pune,Solar Street Light,75666.4,Contractor_37,2026-01-01,0,None
+MPLAD-955CEA,Nagpur,Community Hall,1538286.3,Contractor_41,2025-02-28,0,None
+MPLAD-EF0C89,Nashik,Community Hall,1592440.72,Contractor_23,2025-11-08,0,None
+MPLAD-EFDDAF,Pune,Road Repair,760684.25,Contractor_31,2025-07-06,0,None
+MPLAD-6D83C0,Thane,Drinking Water Plant,491610.34,Contractor_15,2025-06-07,0,None
+MPLAD-D7850C,Nagpur,Community Hall,1399101.85,Contractor_30,2025-02-26,0,None
+MPLAD-972D55,Palghar,Drinking Water Plant,490642.15,Contractor_16,2025-03-14,0,None
+MPLAD-70AF4F,Nashik,Drinking Water Plant,489067.56,Contractor_30,2025-01-29,0,None
+MPLAD-85F36C,Nashik,School Boundary Wall,1228534.43,Contractor_1,2025-07-18,1,Cost Inflation
+MPLAD-0C2025,Pune,Solar Street Light,79291.23,Contractor_29,2025-07-09,0,None
+MPLAD-6D218B,Pune,Solar Street Light,83290.82,Contractor_37,2025-05-26,0,None
+MPLAD-B5CF77,Nagpur,Drinking Water Plant,521663.18,Contractor_11,2025-05-07,0,None
+MPLAD-A77737,Palghar,Drinking Water Plant,489294.19,Contractor_28,2025-02-12,0,None
+MPLAD-F40ECB,Nagpur,Community Hall,7234944.53,Contractor_22,2025-12-12,1,Cost Inflation
+MPLAD-9C1DA6,Thane,Solar Street Light,69641.79,Contractor_45,2025-08-05,0,None
+MPLAD-51821E,Nagpur,School Boundary Wall,327521.67,Contractor_20,2025-04-01,0,None
+MPLAD-C77F1C,Pune,Road Repair,869978.48,Contractor_19,2025-04-18,0,None
+MPLAD-00F998,Nagpur,Solar Street Light,81745.52,Contractor_38,2025-05-16,0,None
+MPLAD-200CFC,Pune,Road Repair,709297.73,Contractor_5,2025-07-13,0,None
+MPLAD-579444,Thane,Road Repair,875641.66,Contractor_15,2025-11-29,0,None
+MPLAD-B50FA9,Nagpur,Solar Street Light,77445.43,Contractor_20,2025-03-22,0,None
+MPLAD-1C859E,Palghar,Solar Street Light,72050.62,Contractor_6,2025-02-27,0,None
+MPLAD-B7198C,Palghar,Solar Street Light,66426.07,Contractor_22,2025-02-02,0,None
+MPLAD-F37BE7,Palghar,Drinking Water Plant,545730.87,Contractor_1,2025-09-15,0,None
+MPLAD-E207EE,Nashik,Community Hall,1356020.09,Contractor_44,2025-11-10,0,None
+MPLAD-D7406F,Palghar,Road Repair,805525.69,Contractor_41,2025-10-12,0,None
+MPLAD-BDF3B1,Nashik,Community Hall,1590270.36,Contractor_48,2025-07-12,0,None
+MPLAD-5DC171,Thane,Community Hall,1438880.62,Contractor_22,2025-02-23,0,None
+MPLAD-DAF52E,Thane,Drinking Water Plant,457729.95,Contractor_13,2025-10-30,0,None
+MPLAD-21B52D,Nashik,Road Repair,889619.51,Contractor_47,2025-06-07,0,None
+MPLAD-E11317,Nagpur,School Boundary Wall,325148.03,Contractor_11,2025-07-09,0,None
+MPLAD-822289,Thane,Community Hall,1480482.6,Contractor_43,2025-09-29,0,None
+MPLAD-65FF5E,Nagpur,Solar Street Light,74187.39,Contractor_18,2025-05-04,0,None
+MPLAD-D48970,Thane,Road Repair,736548.45,Contractor_6,2025-09-02,0,None
+MPLAD-245763,Thane,Road Repair,760949.54,Contractor_5,2025-08-21,0,None
+MPLAD-B16AA4,Palghar,Drinking Water Plant,497955.28,Contractor_33,2026-01-01,0,None
+MPLAD-8CC013,Palghar,Solar Street Light,71673.25,Contractor_5,2025-05-30,0,None
+MPLAD-BF1F88,Palghar,Drinking Water Plant,459546.03,Contractor_36,2025-02-23,0,None
+MPLAD-4F6DCB,Nagpur,Drinking Water Plant,495719.17,Contractor_7,2025-12-16,0,None
+MPLAD-9737A6,Nagpur,Community Hall,1518667.66,Contractor_47,2025-04-20,0,None
+MPLAD-8728F1,Palghar,Community Hall,1669933.01,Contractor_45,2025-01-15,0,None
+MPLAD-C98472,Pune,Road Repair,827701.03,Contractor_11,2025-04-30,0,None
+MPLAD-6BD7B1,Palghar,Solar Street Light,84224.18,Contractor_23,2025-07-04,0,None
+MPLAD-FB7C36,Thane,Solar Street Light,68192.76,Contractor_48,2025-09-18,0,None
+MPLAD-BC5B6B,Thane,Community Hall,1584916.14,Contractor_8,2025-04-14,0,None
+MPLAD-FD842B,Nagpur,Drinking Water Plant,538442.76,Contractor_29,2025-09-28,0,None
+MPLAD-3F5D42,Pune,Solar Street Light,331211.36,Contractor_34,2025-10-19,1,Cost Inflation
+MPLAD-FCD7BD,Nagpur,School Boundary Wall,291467.9,Contractor_5,2025-07-18,0,None
+MPLAD-13C490,Pune,Drinking Water Plant,453015.79,Contractor_26,2025-09-02,0,None
+MPLAD-13D51E,Nagpur,Drinking Water Plant,548996.0,Contractor_6,2025-05-17,0,None
+MPLAD-C8F5B3,Thane,School Boundary Wall,324853.97,Contractor_30,2025-10-03,0,None
+MPLAD-6C1C1E,Pune,Drinking Water Plant,470285.73,Contractor_38,2025-08-25,0,None
+MPLAD-B393D5,Pune,Road Repair,797316.38,Contractor_33,2025-09-07,0,None
+MPLAD-68C170,Thane,School Boundary Wall,303019.97,Contractor_26,2025-12-05,0,None
+MPLAD-31E453,Thane,Drinking Water Plant,533877.0,Contractor_42,2025-05-05,0,None
+MPLAD-01BE79,Thane,Community Hall,1377719.95,Contractor_28,2025-01-12,0,None
+MPLAD-C61FB4,Nagpur,Road Repair,841472.86,Contractor_2,2025-05-30,0,None
+MPLAD-7E5732,Nagpur,Solar Street Light,66789.44,Contractor_10,2025-11-18,0,None
+MPLAD-FB7E9F,Nashik,School Boundary Wall,323482.68,Contractor_18,2025-05-25,0,None
+MPLAD-29A80E,Pune,Road Repair,798382.11,Contractor_38,2025-06-15,0,None
+MPLAD-9FB678,Nagpur,Drinking Water Plant,520969.89,Contractor_24,2025-06-17,0,None
+MPLAD-EFAA3F,Nagpur,School Boundary Wall,312197.74,Contractor_44,2025-11-06,0,None
+MPLAD-616B37,Palghar,Solar Street Light,79394.54,Contractor_20,2025-01-05,0,None
+MPLAD-517798,Thane,Solar Street Light,67361.66,Contractor_39,2025-10-08,0,None
+MPLAD-70F33B,Pune,Road Repair,720934.23,Contractor_1,2025-01-04,0,None
+MPLAD-89FF65,Nashik,Drinking Water Plant,461109.26,Contractor_42,2025-08-06,0,None
+MPLAD-49F940,Pune,School Boundary Wall,296627.05,Contractor_39,2025-07-09,0,None
+MPLAD-25EBFE,Palghar,School Boundary Wall,299941.28,Contractor_18,2025-10-20,0,None
+MPLAD-D01B0B,Palghar,Solar Street Light,67258.75,Contractor_14,2025-01-30,0,None
+MPLAD-708D2F,Thane,Community Hall,1579106.76,Contractor_40,2025-05-19,0,None
+MPLAD-1B73C6,Pune,Road Repair,734451.87,Contractor_13,2025-08-29,0,None
+MPLAD-0A8A8F,Nagpur,School Boundary Wall,1333546.69,Contractor_37,2025-09-16,1,Cost Inflation
+MPLAD-FBD89A,Palghar,School Boundary Wall,294178.1,Contractor_25,2025-12-02,0,None
+MPLAD-79ECF6,Thane,Road Repair,861822.59,Contractor_40,2025-01-28,0,None
+MPLAD-DE0E01,Pune,Solar Street Light,75469.44,Contractor_28,2025-06-27,0,None
+MPLAD-91FB9D,Nagpur,Drinking Water Plant,467959.3,Contractor_1,2025-12-20,0,None
+MPLAD-C679D0,Thane,Solar Street Light,76707.72,Contractor_40,2025-12-14,0,None
+MPLAD-E34923,Palghar,Community Hall,1692596.61,Contractor_23,2025-07-18,0,None
+MPLAD-7840E9,Nagpur,Drinking Water Plant,547874.23,Contractor_50,2025-02-07,0,None
+MPLAD-6E1AAD,Nagpur,Drinking Water Plant,501199.69,Contractor_22,2025-03-08,0,None
+MPLAD-F920D6,Pune,Solar Street Light,75048.3,Contractor_34,2025-09-10,0,None
+MPLAD-FB5362,Pune,Road Repair,806305.52,Contractor_15,2025-10-20,0,None
+MPLAD-BE3E8C,Nagpur,School Boundary Wall,284913.74,Contractor_35,2025-06-17,0,None
+MPLAD-8631BC,Thane,Solar Street Light,73985.49,Contractor_5,2025-07-22,0,None
+MPLAD-E18AFD,Thane,School Boundary Wall,329144.78,Contractor_27,2025-03-28,0,None
+MPLAD-12D4C0,Nagpur,Drinking Water Plant,498007.75,Contractor_21,2025-07-05,0,None
+MPLAD-646F86,Palghar,Community Hall,1657894.61,Contractor_30,2025-09-01,0,None
+MPLAD-4444C4,Nashik,Community Hall,1317296.48,Contractor_9,2025-01-16,0,None
+MPLAD-96130E,Pune,School Boundary Wall,309560.63,Contractor_15,2025-03-29,0,None
+MPLAD-B8586D,Pune,Community Hall,1318186.73,Contractor_1,2025-08-07,0,None
+MPLAD-14D7C8,Pune,School Boundary Wall,293224.32,Contractor_47,2025-11-23,0,None
+MPLAD-1EF01F,Palghar,Community Hall,1598594.25,Contractor_49,2025-12-31,0,None
+MPLAD-D2DE8E,Palghar,School Boundary Wall,272809.91,Contractor_10,2025-01-22,0,None
+MPLAD-F41C3F,Nagpur,Road Repair,764502.23,Contractor_38,2025-09-29,0,None
+MPLAD-D0705E,Palghar,Road Repair,795317.83,Contractor_9,2025-01-28,0,None
+MPLAD-E676D6,Palghar,Road Repair,819225.25,Contractor_13,2025-08-12,0,None
+MPLAD-EE3403,Pune,Road Repair,764057.55,Contractor_12,2025-05-14,0,None
+MPLAD-04A836,Nashik,Solar Street Light,72473.01,Contractor_10,2025-01-07,0,None
+MPLAD-8EC843,Nashik,Community Hall,1479487.5,Contractor_20,2025-06-17,0,None
+MPLAD-0B3A9C,Nagpur,Solar Street Light,66311.98,Contractor_45,2026-01-01,0,None
+MPLAD-BBCBAE,Thane,Solar Street Light,76740.69,Contractor_27,2025-11-22,0,None
+MPLAD-512943,Nagpur,Community Hall,1436690.08,Contractor_26,2025-10-30,0,None
+MPLAD-E2E085,Palghar,School Boundary Wall,311061.64,Contractor_29,2025-02-16,0,None
+MPLAD-86F3E9,Nagpur,Road Repair,748639.61,Contractor_8,2025-09-18,0,None
+MPLAD-9AA84E,Thane,Community Hall,1495245.58,Contractor_8,2025-08-13,0,None
+MPLAD-DE31B0,Palghar,Solar Street Light,66587.52,Contractor_18,2025-04-04,0,None
+MPLAD-2F0226,Nagpur,Community Hall,1584137.48,Contractor_50,2025-05-31,0,None
+MPLAD-A77C65,Palghar,Road Repair,2969643.06,Contractor_5,2025-09-05,1,Cost Inflation
+MPLAD-217D94,Pune,Drinking Water Plant,522744.19,Contractor_25,2025-04-14,0,None
+MPLAD-71161A,Palghar,Solar Street Light,80545.88,Contractor_39,2025-06-21,0,None
+MPLAD-36B4B9,Pune,Community Hall,1450520.07,Contractor_37,2025-12-15,0,None
+MPLAD-1E33F6,Nagpur,School Boundary Wall,283631.56,Contractor_2,2025-05-05,0,None
+MPLAD-D676AC,Nashik,School Boundary Wall,287527.85,Contractor_16,2025-09-08,0,None
+MPLAD-2ACC7A,Nagpur,Community Hall,5495529.09,Contractor_24,2025-01-19,1,Cost Inflation
+MPLAD-4DA1DC,Pune,Solar Street Light,74833.94,Contractor_34,2025-06-05,0,None
+MPLAD-6282D1,Nagpur,Drinking Water Plant,498171.78,Contractor_50,2025-05-08,0,None
+MPLAD-65E556,Palghar,Road Repair,704563.77,Contractor_13,2025-11-07,0,None
+MPLAD-70238E,Palghar,Drinking Water Plant,457992.26,Contractor_3,2025-11-18,0,None
+MPLAD-80B4E6,Nashik,Community Hall,1685125.5,Contractor_18,2025-03-10,0,None
+MPLAD-E6017D,Pune,Road Repair,808505.05,Contractor_44,2025-03-09,0,None
+MPLAD-A2CD31,Pune,School Boundary Wall,273395.36,Contractor_4,2025-01-06,0,None
+MPLAD-4153CE,Nagpur,Solar Street Light,67916.31,Contractor_45,2025-02-20,0,None
+MPLAD-A8918F,Pune,Drinking Water Plant,533928.33,Contractor_20,2025-10-09,0,None
+MPLAD-7D80D9,Nagpur,School Boundary Wall,290735.68,Contractor_21,2025-04-25,0,None
+MPLAD-75B5B8,Pune,Community Hall,1513864.83,Contractor_32,2025-11-08,0,None
+MPLAD-0EE016,Nashik,Community Hall,1328781.94,Contractor_37,2025-05-11,0,None
+MPLAD-7D74E1,Thane,School Boundary Wall,305880.58,Contractor_38,2025-08-17,0,None
+MPLAD-D9F420,Nagpur,Solar Street Light,82779.01,Contractor_9,2025-11-30,0,None
+MPLAD-AE383C,Pune,School Boundary Wall,276509.95,Contractor_42,2025-01-21,0,None
+MPLAD-342175,Palghar,Road Repair,738843.89,Contractor_29,2025-11-14,0,None
+MPLAD-1429C9,Thane,Drinking Water Plant,519425.15,Contractor_37,2025-09-16,0,None
+MPLAD-F08DC5,Pune,Road Repair,830230.61,Contractor_25,2025-01-20,0,None
+MPLAD-6D2547,Pune,Solar Street Light,67196.0,Contractor_38,2025-01-10,0,None
+MPLAD-7D9BB0,Thane,School Boundary Wall,285905.13,Contractor_47,2025-04-01,0,None
+MPLAD-2B2989,Nagpur,Community Hall,1564500.21,Contractor_17,2025-12-10,0,None
+MPLAD-C8C346,Palghar,Solar Street Light,79320.07,Contractor_25,2025-09-30,0,None
+MPLAD-600764,Thane,Road Repair,807339.92,Contractor_44,2025-01-13,0,None
+MPLAD-E86A91,Palghar,School Boundary Wall,1260232.78,Contractor_29,2025-01-11,1,Cost Inflation
+MPLAD-8B211C,Palghar,Community Hall,1467257.44,Contractor_14,2025-02-21,0,None
+MPLAD-5C4099,Pune,Road Repair,722846.3,Contractor_25,2025-03-08,0,None
+MPLAD-81E9AB,Palghar,Community Hall,1581323.34,Contractor_27,2025-06-12,0,None
+MPLAD-D698E8,Nagpur,Drinking Water Plant,537152.21,Contractor_44,2025-11-12,0,None
+MPLAD-F741E5,Nashik,Drinking Water Plant,540363.23,Contractor_44,2025-08-08,0,None
+MPLAD-233F97,Thane,School Boundary Wall,299358.27,Contractor_49,2025-12-11,0,None
+MPLAD-03F5C1,Palghar,Drinking Water Plant,488356.75,Contractor_45,2025-05-22,0,None
+MPLAD-7E3414,Palghar,Community Hall,1596886.1,Contractor_36,2025-11-15,0,None
+MPLAD-FC365C,Nashik,Drinking Water Plant,534126.82,Contractor_42,2025-12-17,0,None
+MPLAD-5D5FD1,Pune,Solar Street Light,78989.56,Contractor_42,2025-05-02,0,None
+MPLAD-77C9F1,Palghar,Solar Street Light,69528.86,Contractor_37,2025-01-23,0,None
+MPLAD-ADC800,Nashik,Solar Street Light,83687.41,Contractor_12,2025-05-04,0,None
+MPLAD-DA1137,Pune,Drinking Water Plant,545603.63,Contractor_31,2025-01-16,0,None
+MPLAD-674475,Thane,School Boundary Wall,316394.32,Contractor_14,2025-03-27,0,None
+MPLAD-1422C7,Nagpur,Community Hall,5158256.58,Contractor_13,2025-04-14,1,Cost Inflation
+MPLAD-CEBD22,Nashik,Drinking Water Plant,475841.78,Contractor_35,2025-02-21,0,None
+MPLAD-17F3DE,Nagpur,Solar Street Light,79462.28,Contractor_19,2025-04-12,0,None
+MPLAD-DE43E8,Nashik,Solar Street Light,278441.01,Contractor_18,2025-11-19,1,Cost Inflation
+MPLAD-828F7B,Palghar,Solar Street Light,69889.34,Contractor_9,2025-12-31,0,None
+MPLAD-5FDF87,Thane,Road Repair,792213.66,Contractor_29,2025-02-25,0,None
+MPLAD-2F701B,Palghar,Solar Street Light,309220.27,Contractor_6,2025-04-29,1,Cost Inflation
+MPLAD-A50255,Nashik,School Boundary Wall,1149915.25,Contractor_6,2025-10-08,1,Cost Inflation
+MPLAD-ADAD25,Nashik,Solar Street Light,82320.32,Contractor_48,2025-07-28,0,None
+MPLAD-58A4E1,Palghar,School Boundary Wall,311827.29,Contractor_31,2025-07-16,0,None
+MPLAD-D37D76,Nashik,Solar Street Light,76772.4,Contractor_32,2025-01-01,0,None
+MPLAD-7B90EC,Pune,Road Repair,723541.15,Contractor_10,2025-04-18,0,None
+MPLAD-6EFF90,Nagpur,School Boundary Wall,326809.48,Contractor_8,2025-05-30,0,None
+MPLAD-DE0D62,Nagpur,Solar Street Light,78559.48,Contractor_22,2025-10-19,0,None
+MPLAD-0039AB,Palghar,School Boundary Wall,317104.77,Contractor_6,2025-01-08,0,None
+MPLAD-B3C52E,Nashik,Community Hall,1652814.93,Contractor_9,2025-02-25,0,None
+MPLAD-BDC747,Palghar,Road Repair,857409.73,Contractor_33,2025-05-12,0,None
+MPLAD-79F18B,Pune,Road Repair,875478.06,Contractor_19,2025-06-14,0,None
+MPLAD-24021B,Nagpur,Road Repair,705484.49,Contractor_28,2025-10-31,0,None
+MPLAD-FE47A0,Thane,Drinking Water Plant,524288.59,Contractor_26,2025-06-21,0,None
+MPLAD-73E663,Palghar,Community Hall,1645743.43,Contractor_35,2025-11-28,0,None
+MPLAD-6DECA0,Palghar,Road Repair,812258.97,Contractor_4,2025-01-18,0,None
+MPLAD-3EF704,Thane,School Boundary Wall,320367.9,Contractor_29,2025-11-02,0,None
+MPLAD-464037,Palghar,School Boundary Wall,306241.64,Contractor_8,2025-11-15,0,None
+MPLAD-6E4D9C,Pune,Road Repair,835998.19,Contractor_15,2025-07-10,0,None
+MPLAD-DFEBA2,Thane,Community Hall,7234544.97,Contractor_6,2025-02-05,1,Cost Inflation
+MPLAD-C1E589,Nashik,Drinking Water Plant,450037.64,Contractor_15,2025-11-19,0,None
+MPLAD-7C6544,Nashik,Community Hall,1501374.71,Contractor_44,2025-05-16,0,None
+MPLAD-711F11,Nashik,Solar Street Light,70876.39,Contractor_39,2025-02-28,0,None
+MPLAD-C22C5C,Nashik,Solar Street Light,69930.31,Contractor_24,2025-10-28,0,None
+MPLAD-241608,Pune,Drinking Water Plant,509712.57,Contractor_7,2025-09-15,0,None
+MPLAD-B9CFD5,Nashik,Solar Street Light,74848.87,Contractor_41,2025-05-17,0,None
+MPLAD-648511,Nashik,Solar Street Light,77377.01,Contractor_35,2025-04-27,0,None
+MPLAD-D8ADCC,Thane,Community Hall,1650170.74,Contractor_24,2025-07-25,0,None
+MPLAD-AAAFA6,Palghar,School Boundary Wall,304041.14,Contractor_28,2025-11-06,0,None
+MPLAD-03CB41,Nagpur,School Boundary Wall,305665.14,Contractor_17,2025-06-27,0,None
+MPLAD-BA94EA,Thane,School Boundary Wall,324412.32,Contractor_19,2025-05-08,0,None
+MPLAD-D26F02,Nagpur,Community Hall,1553068.39,Contractor_48,2025-12-10,0,None
+MPLAD-AB4814,Nashik,Road Repair,715650.59,Contractor_16,2025-10-11,0,None
+MPLAD-D128A5,Nagpur,School Boundary Wall,303971.88,Contractor_29,2025-09-24,0,None
+MPLAD-FE2C1C,Nagpur,Drinking Water Plant,452977.36,Contractor_37,2025-10-06,0,None
+MPLAD-48C7DA,Palghar,Road Repair,821660.8,Contractor_12,2025-12-15,0,None
+MPLAD-39F61C,Nagpur,School Boundary Wall,270214.18,Contractor_2,2025-05-22,0,None
+MPLAD-EECC1B,Pune,Drinking Water Plant,541310.0,Contractor_35,2025-12-29,0,None
+MPLAD-4E6EC1,Palghar,School Boundary Wall,1327551.36,Contractor_34,2025-12-15,1,Cost Inflation
+MPLAD-3F62ED,Pune,Drinking Water Plant,466082.94,Contractor_29,2025-04-28,0,None
+MPLAD-C43343,Nashik,Solar Street Light,262045.89,Contractor_36,2025-04-17,1,Cost Inflation
+MPLAD-D65FB0,Nagpur,School Boundary Wall,276163.55,Contractor_50,2025-03-25,0,None
+MPLAD-1DBAB2,Thane,Drinking Water Plant,516827.75,Contractor_14,2025-02-23,0,None
+MPLAD-EDDA18,Pune,School Boundary Wall,289474.83,Contractor_11,2025-12-01,0,None
+MPLAD-8CA219,Pune,Drinking Water Plant,510163.04,Contractor_44,2026-01-01,0,None
+MPLAD-93CF9D,Nagpur,Drinking Water Plant,506263.56,Contractor_43,2025-04-26,0,None
+MPLAD-9A09ED,Pune,Road Repair,710027.22,Contractor_6,2025-08-27,0,None
+MPLAD-C8173B,Nashik,Community Hall,1498469.62,Contractor_5,2025-09-19,0,None
+MPLAD-4BF9D6,Palghar,Solar Street Light,81721.99,Contractor_9,2025-09-17,0,None
+MPLAD-7B4D7A,Thane,Community Hall,1386508.27,Contractor_29,2025-06-21,0,None
+MPLAD-FF7BB6,Pune,Solar Street Light,75171.61,Contractor_48,2025-11-02,0,None
+MPLAD-C3C43D,Thane,Drinking Water Plant,515406.14,Contractor_12,2025-03-03,0,None
+MPLAD-D0D893,Pune,Road Repair,755754.01,Contractor_34,2025-01-07,0,None
+MPLAD-C5DEA0,Nashik,School Boundary Wall,297227.61,Contractor_41,2025-03-09,0,None
+MPLAD-ED320D,Palghar,School Boundary Wall,282450.28,Contractor_44,2025-01-24,0,None
+MPLAD-3C0544,Nashik,Solar Street Light,72122.15,Contractor_7,2025-04-28,0,None
+MPLAD-1802AF,Palghar,School Boundary Wall,277715.54,Contractor_5,2025-09-30,0,None
+MPLAD-DB08B9,Nashik,Drinking Water Plant,453439.49,Contractor_15,2025-04-05,0,None
+MPLAD-A437B3,Thane,Drinking Water Plant,2012098.13,Contractor_10,2025-07-05,1,Cost Inflation
+MPLAD-0EC8B3,Thane,Drinking Water Plant,2210723.61,Contractor_5,2025-09-29,1,Cost Inflation
+MPLAD-76DF18,Nagpur,Drinking Water Plant,500811.09,Contractor_44,2025-07-07,0,None
+MPLAD-54911D,Thane,Road Repair,780718.18,Contractor_23,2025-11-30,0,None
+MPLAD-91F9AD,Thane,Solar Street Light,75827.84,Contractor_11,2025-09-16,0,None
+MPLAD-BA223F,Palghar,School Boundary Wall,299622.87,Contractor_9,2025-11-11,0,None
+MPLAD-9E6068,Nagpur,Drinking Water Plant,535244.17,Contractor_14,2025-06-07,0,None
+MPLAD-11B686,Nagpur,Road Repair,790694.37,Contractor_21,2025-12-30,0,None
+MPLAD-9A66B5,Palghar,Drinking Water Plant,478524.68,Contractor_18,2025-09-21,0,None
+MPLAD-CC8BE7,Nashik,Solar Street Light,78919.54,Contractor_1,2025-09-16,0,None
+MPLAD-4DB5EF,Palghar,Solar Street Light,84364.15,Contractor_31,2025-10-14,0,None
+MPLAD-006FA1,Thane,School Boundary Wall,317467.37,Contractor_10,2025-12-11,0,None
+MPLAD-CCC481,Thane,School Boundary Wall,321884.42,Contractor_5,2025-12-02,0,None
+MPLAD-B4988B,Thane,Solar Street Light,80111.8,Contractor_31,2025-04-19,0,None
+MPLAD-7C0CBE,Thane,Community Hall,1352123.42,Contractor_12,2025-12-08,0,None
+MPLAD-8DE149,Nashik,School Boundary Wall,1422950.56,Contractor_49,2025-08-18,1,Cost Inflation
+MPLAD-505075,Palghar,School Boundary Wall,284288.12,Contractor_34,2025-08-29,0,None
+MPLAD-AB76C9,Nagpur,Solar Street Light,74336.12,Contractor_3,2025-10-18,0,None
+MPLAD-0F77E6,Pune,Community Hall,1596818.45,Contractor_11,2025-08-14,0,None
+MPLAD-A82F06,Thane,Community Hall,1385696.03,Contractor_23,2025-08-03,0,None
+MPLAD-0CFDAC,Pune,Drinking Water Plant,491612.47,Contractor_34,2025-02-17,0,None
+MPLAD-340ED9,Nashik,Community Hall,1302571.39,Contractor_24,2025-06-20,0,None
+MPLAD-15D6CE,Pune,Road Repair,890459.95,Contractor_34,2025-09-15,0,None
+MPLAD-6416C5,Thane,Solar Street Light,70885.39,Contractor_23,2025-10-02,0,None
+MPLAD-256F6D,Pune,Road Repair,718676.86,Contractor_49,2025-10-21,0,None
+MPLAD-E3BEFA,Nashik,Road Repair,890865.55,Contractor_47,2025-09-17,0,None
+MPLAD-F79D6F,Nashik,School Boundary Wall,304301.6,Contractor_22,2025-02-14,0,None
+MPLAD-283C2C,Palghar,Community Hall,1388112.57,Contractor_1,2025-08-02,0,None
+MPLAD-B20708,Nashik,Drinking Water Plant,484040.32,Contractor_34,2025-05-29,0,None
+MPLAD-104592,Palghar,Road Repair,802605.55,Contractor_7,2025-03-05,0,None
+MPLAD-5D6CC8,Nagpur,School Boundary Wall,313744.65,Contractor_35,2025-09-07,0,None
+MPLAD-4CA56B,Thane,Drinking Water Plant,456815.59,Contractor_17,2025-08-24,0,None
+MPLAD-5C35F4,Palghar,Community Hall,1319009.21,Contractor_45,2025-07-22,0,None
+MPLAD-5BE75F,Pune,Road Repair,728802.1,Contractor_11,2025-09-11,0,None
+MPLAD-64A2F3,Nagpur,Road Repair,705304.0,Contractor_16,2025-02-22,0,None
+MPLAD-BFAAD4,Thane,Road Repair,782878.87,Contractor_11,2025-06-12,0,None
+MPLAD-2AEC75,Nagpur,Road Repair,3548055.24,Contractor_1,2025-05-03,1,Cost Inflation
+MPLAD-EEE231,Pune,Drinking Water Plant,536477.01,Contractor_10,2025-04-28,0,None
+MPLAD-9612FC,Nashik,Road Repair,770070.14,Contractor_34,2025-10-31,0,None
+MPLAD-F47A8F,Nashik,School Boundary Wall,289199.56,Contractor_20,2025-06-13,0,None
+MPLAD-305C6B,Nashik,Drinking Water Plant,484206.0,Contractor_22,2025-04-03,0,None
+MPLAD-D3597D,Thane,Community Hall,1316039.26,Contractor_5,2025-08-20,0,None
+MPLAD-BA4EBD,Nagpur,Solar Street Light,65855.74,Contractor_32,2025-07-18,0,None
+MPLAD-7F620A,Thane,Solar Street Light,71585.42,Contractor_40,2025-10-16,0,None
+MPLAD-6E03E9,Nagpur,Solar Street Light,329775.07,Contractor_45,2025-09-14,1,Cost Inflation
+MPLAD-C28157,Nagpur,Community Hall,1363672.84,Contractor_3,2025-10-26,0,None
+MPLAD-86A747,Pune,Solar Street Light,79282.89,Contractor_47,2025-12-11,0,None
+MPLAD-AD406A,Pune,Road Repair,736992.67,Contractor_49,2025-07-16,0,None
+MPLAD-529FEA,Thane,Community Hall,1342757.7,Contractor_17,2025-12-06,0,None
+MPLAD-8F149D,Nagpur,School Boundary Wall,274685.57,Contractor_39,2025-05-20,0,None
+MPLAD-4C5331,Thane,Road Repair,751802.83,Contractor_5,2025-05-15,0,None
+MPLAD-ECD6D7,Palghar,Road Repair,700508.78,Contractor_38,2025-01-16,0,None
+MPLAD-0C7E5A,Nagpur,Drinking Water Plant,504889.9,Contractor_32,2025-02-28,0,None
+MPLAD-BC8DF4,Thane,Community Hall,1667856.32,Contractor_39,2025-11-21,0,None
+MPLAD-B13504,Nagpur,Drinking Water Plant,492940.06,Contractor_3,2025-04-28,0,None
+MPLAD-DE8EEB,Thane,Road Repair,701496.36,Contractor_38,2025-05-01,0,None
+MPLAD-127E34,Thane,Road Repair,833923.45,Contractor_11,2025-01-23,0,None
+MPLAD-F6E4FE,Thane,Drinking Water Plant,533971.75,Contractor_21,2025-02-05,0,None
+MPLAD-46D186,Nashik,Community Hall,7155216.52,Contractor_42,2025-07-22,1,Cost Inflation
+MPLAD-E16210,Thane,Community Hall,1355425.62,Contractor_38,2025-03-19,0,None
+MPLAD-24CD98,Nagpur,Road Repair,770869.66,Contractor_3,2025-07-12,0,None
+MPLAD-E8963F,Pune,Drinking Water Plant,521586.77,Contractor_12,2025-06-28,0,None
+MPLAD-39C5E7,Nashik,Road Repair,776328.53,Contractor_33,2025-06-24,0,None
+MPLAD-7DB2AE,Palghar,Drinking Water Plant,464871.17,Contractor_12,2025-12-16,0,None
+MPLAD-F610BA,Thane,Drinking Water Plant,2180862.91,Contractor_32,2025-01-25,1,Cost Inflation
+MPLAD-27AE85,Palghar,Drinking Water Plant,452040.47,Contractor_36,2025-06-03,0,None
+MPLAD-2B96DD,Nagpur,School Boundary Wall,325127.18,Contractor_25,2025-06-04,0,None
+MPLAD-DE6C1A,Pune,School Boundary Wall,325363.39,Contractor_4,2025-04-22,0,None
+MPLAD-FA3A57,Nashik,Community Hall,1374668.12,Contractor_1,2025-08-08,0,None
+MPLAD-E08F72,Pune,Drinking Water Plant,529819.96,Contractor_43,2025-04-18,0,None
+MPLAD-423FDB,Thane,Drinking Water Plant,477239.19,Contractor_16,2025-12-01,0,None
+MPLAD-6AC3FE,Nashik,School Boundary Wall,286891.0,Contractor_43,2025-05-11,0,None
+MPLAD-5C61D3,Palghar,School Boundary Wall,328991.36,Contractor_29,2025-09-02,0,None
+MPLAD-E959F5,Pune,Community Hall,1628292.29,Contractor_27,2025-11-12,0,None
+MPLAD-6D7255,Nashik,Community Hall,1426082.15,Contractor_36,2025-10-07,0,None
+MPLAD-0116AD,Thane,Road Repair,759627.65,Contractor_17,2025-04-02,0,None
+MPLAD-5C213D,Thane,Community Hall,1402337.9,Contractor_39,2025-03-03,0,None
+MPLAD-D65A73,Palghar,School Boundary Wall,293248.24,Contractor_31,2025-07-17,0,None
+MPLAD-3DE71E,Nagpur,Solar Street Light,70278.16,Contractor_10,2025-06-11,0,None
+MPLAD-3EA81E,Pune,Drinking Water Plant,450125.29,Contractor_41,2025-05-27,0,None
+MPLAD-570717,Palghar,Road Repair,837816.94,Contractor_16,2025-01-09,0,None
+MPLAD-1F6481,Nashik,Community Hall,1540453.0,Contractor_50,2025-06-14,0,None
+MPLAD-86DEE3,Pune,Road Repair,753381.61,Contractor_32,2025-05-07,0,None
+MPLAD-515D0E,Thane,Road Repair,797274.2,Contractor_18,2025-06-04,0,None
+MPLAD-F0C049,Pune,Road Repair,847948.97,Contractor_30,2025-06-30,0,None
+MPLAD-F736F7,Pune,Drinking Water Plant,534191.27,Contractor_39,2025-05-23,0,None
+MPLAD-89324D,Thane,Community Hall,1576155.09,Contractor_28,2025-01-11,0,None
+MPLAD-A70FE7,Pune,Solar Street Light,69307.28,Contractor_25,2025-08-05,0,None
+MPLAD-AD6161,Pune,Drinking Water Plant,519118.56,Contractor_49,2025-10-25,0,None
+MPLAD-68C951,Pune,Road Repair,791927.2,Contractor_46,2025-05-13,0,None
+MPLAD-B006BA,Nashik,Community Hall,1465206.41,Contractor_25,2025-04-27,0,None
+MPLAD-ECE95B,Thane,Road Repair,775458.49,Contractor_43,2025-07-13,0,None
+MPLAD-A01BA1,Nagpur,Solar Street Light,71852.9,Contractor_50,2025-07-07,0,None
+MPLAD-D0AD52,Thane,Road Repair,770480.05,Contractor_49,2025-02-07,0,None
+MPLAD-ADBA54,Pune,Community Hall,1599982.59,Contractor_6,2025-05-30,0,None
+MPLAD-B98964,Nashik,Road Repair,752893.22,Contractor_29,2025-05-16,0,None
+MPLAD-C96152,Nagpur,School Boundary Wall,280069.72,Contractor_12,2025-12-28,0,None
+MPLAD-2957B5,Thane,Road Repair,866253.18,Contractor_7,2025-05-18,0,None
+MPLAD-F838E1,Pune,School Boundary Wall,294408.68,Contractor_34,2025-02-09,0,None
+MPLAD-38BCDD,Thane,Road Repair,846000.9,Contractor_33,2025-03-06,0,None
+MPLAD-229414,Nashik,School Boundary Wall,287077.39,Contractor_36,2025-02-23,0,None
+MPLAD-ABEE3A,Nagpur,School Boundary Wall,284231.33,Contractor_24,2025-04-14,0,None
+MPLAD-76F8F8,Nashik,Drinking Water Plant,544505.56,Contractor_49,2025-08-06,0,None
+MPLAD-B7BA8A,Nashik,School Boundary Wall,293454.0,Contractor_28,2025-01-12,0,None
+MPLAD-C8C9EA,Pune,Road Repair,793085.06,Contractor_13,2025-01-27,0,None
+MPLAD-D7BF28,Palghar,School Boundary Wall,307566.5,Contractor_37,2025-01-01,0,None
+MPLAD-A6A6B2,Nagpur,School Boundary Wall,317846.98,Contractor_42,2025-07-19,0,None
+MPLAD-562BE2,Thane,Community Hall,1392144.9,Contractor_44,2025-03-19,0,None
+MPLAD-C94EE6,Pune,Drinking Water Plant,548164.25,Contractor_19,2025-10-20,0,None
+MPLAD-115E61,Nagpur,School Boundary Wall,303534.33,Contractor_47,2025-08-12,0,None
+MPLAD-FDDE0A,Nagpur,Solar Street Light,79657.08,Contractor_21,2025-02-17,0,None
+MPLAD-1BAC9C,Thane,Solar Street Light,66094.79,Contractor_24,2025-03-28,0,None
+MPLAD-2EABC1,Pune,Road Repair,795651.98,Contractor_38,2025-12-17,0,None
+MPLAD-88B6AF,Palghar,Community Hall,1543115.96,Contractor_29,2025-05-02,0,None
+MPLAD-B7FA2C,Nashik,Drinking Water Plant,501962.36,Contractor_22,2025-06-27,0,None
+MPLAD-6123B2,Nashik,Solar Street Light,73107.94,Contractor_4,2025-02-07,0,None
+MPLAD-8B2922,Nashik,Community Hall,1672527.02,Contractor_3,2025-04-06,0,None
+MPLAD-9E0E39,Palghar,Drinking Water Plant,451218.9,Contractor_38,2025-07-14,0,None
+MPLAD-9CF7DA,Thane,Solar Street Light,77232.48,Contractor_11,2025-04-18,0,None
+MPLAD-09B0F3,Thane,Road Repair,897011.02,Contractor_9,2025-06-11,0,None
+MPLAD-03FBED,Nagpur,Community Hall,1652736.33,Contractor_25,2025-12-31,0,None
+MPLAD-629599,Nagpur,School Boundary Wall,272502.15,Contractor_39,2025-07-05,0,None
+MPLAD-291AB5,Nashik,School Boundary Wall,303947.91,Contractor_22,2025-06-21,0,None
+MPLAD-BDC7C3,Thane,Solar Street Light,74349.23,Contractor_20,2025-12-11,0,None
+MPLAD-F97ED4,Palghar,Road Repair,728410.94,Contractor_49,2025-08-16,0,None
+MPLAD-D451A9,Nagpur,Drinking Water Plant,476243.92,Contractor_40,2025-11-09,0,None
+MPLAD-847A32,Nagpur,Solar Street Light,68792.17,Contractor_4,2025-05-12,0,None
+MPLAD-39661D,Nagpur,Road Repair,818102.34,Contractor_44,2025-06-26,0,None
+MPLAD-1F7FE7,Nashik,Drinking Water Plant,481593.42,Contractor_28,2025-05-26,0,None
+MPLAD-AE1D5A,Pune,Drinking Water Plant,525215.67,Contractor_42,2025-05-20,0,None
+MPLAD-6CD34B,Pune,Road Repair,899328.74,Contractor_22,2025-09-09,0,None
+MPLAD-984507,Nashik,Road Repair,836891.83,Contractor_22,2026-01-01,0,None
+MPLAD-A087F2,Thane,School Boundary Wall,271007.94,Contractor_37,2025-05-07,0,None
+MPLAD-96D138,Nagpur,School Boundary Wall,319525.37,Contractor_12,2025-11-26,0,None
+MPLAD-4CFA1C,Thane,School Boundary Wall,311223.62,Contractor_1,2025-10-20,0,None
+MPLAD-82235A,Nagpur,Solar Street Light,77875.83,Contractor_33,2025-06-26,0,None
+MPLAD-3B0C1F,Nagpur,Solar Street Light,78226.46,Contractor_18,2025-10-03,0,None
+MPLAD-14AF0A,Palghar,Drinking Water Plant,547489.13,Contractor_32,2025-11-02,0,None
+MPLAD-26EC74,Nashik,Solar Street Light,335415.96,Contractor_3,2025-05-28,1,Cost Inflation
+MPLAD-72CB18,Nashik,Drinking Water Plant,491497.9,Contractor_25,2025-04-21,0,None
+MPLAD-CC9130,Nagpur,Community Hall,1491703.56,Contractor_9,2025-07-26,0,None
+MPLAD-D14025,Nashik,Drinking Water Plant,496676.09,Contractor_13,2025-05-26,0,None
+MPLAD-7D2D4F,Nashik,Drinking Water Plant,456921.28,Contractor_39,2025-03-03,0,None
+MPLAD-291978,Palghar,Drinking Water Plant,543611.12,Contractor_14,2025-04-23,0,None
+MPLAD-C2B915,Thane,Drinking Water Plant,465758.9,Contractor_48,2025-05-15,0,None
+MPLAD-5D79A1,Thane,Road Repair,824986.26,Contractor_7,2025-12-07,0,None
+MPLAD-778963,Nashik,Solar Street Light,348474.77,Contractor_9,2025-11-14,1,Cost Inflation
+MPLAD-F81353,Pune,Drinking Water Plant,508972.08,Contractor_35,2025-04-02,0,None
+MPLAD-31E46E,Nagpur,Community Hall,1403048.79,Contractor_19,2025-01-04,0,None
+MPLAD-23864C,Palghar,Solar Street Light,73235.6,Contractor_42,2025-02-18,0,None
+MPLAD-2973DE,Nagpur,Solar Street Light,66654.05,Contractor_24,2025-01-15,0,None
+MPLAD-562583,Nagpur,Road Repair,713108.26,Contractor_6,2025-12-15,0,None
+MPLAD-627CAB,Palghar,School Boundary Wall,298838.61,Contractor_15,2025-03-27,0,None
+MPLAD-41C857,Thane,School Boundary Wall,318912.57,Contractor_13,2025-02-12,0,None
+MPLAD-897DF6,Pune,Drinking Water Plant,525865.37,Contractor_18,2025-09-06,0,None
+MPLAD-5728F8,Palghar,Solar Street Light,74713.2,Contractor_49,2025-09-28,0,None
+MPLAD-997B8D,Nashik,School Boundary Wall,301021.99,Contractor_13,2025-07-10,0,None
+MPLAD-542166,Nashik,Drinking Water Plant,516655.46,Contractor_35,2025-01-11,0,None
+MPLAD-DD1C27,Thane,School Boundary Wall,320328.27,Contractor_25,2025-02-15,0,None
+MPLAD-B79DE6,Palghar,Community Hall,1600270.31,Contractor_2,2025-10-18,0,None
+MPLAD-AC3FB8,Nagpur,Drinking Water Plant,513165.81,Contractor_4,2025-08-08,0,None
+MPLAD-B09C97,Nagpur,Solar Street Light,82451.6,Contractor_39,2025-10-14,0,None
+MPLAD-A3C8C5,Nashik,School Boundary Wall,305697.34,Contractor_22,2025-03-13,0,None
+MPLAD-8B5BBF,Nashik,Drinking Water Plant,485965.17,Contractor_48,2025-09-10,0,None
+MPLAD-342D9F,Palghar,Drinking Water Plant,458841.98,Contractor_12,2025-01-02,0,None
+MPLAD-858F6D,Nashik,Solar Street Light,84683.75,Contractor_9,2025-09-20,0,None
+MPLAD-CEDEF5,Nagpur,Community Hall,5248325.02,Contractor_34,2025-08-25,1,Cost Inflation
+MPLAD-7674FE,Pune,Solar Street Light,313609.56,Contractor_4,2025-12-14,1,Cost Inflation
+MPLAD-816F21,Pune,Drinking Water Plant,1926216.04,Contractor_11,2025-11-26,1,Cost Inflation
+MPLAD-F033A0,Pune,School Boundary Wall,283873.67,Contractor_38,2025-07-17,0,None
+MPLAD-1D79FA,Nagpur,Community Hall,1675936.89,Contractor_19,2025-01-15,0,None
+MPLAD-D3FB09,Nashik,Community Hall,1590401.9,Contractor_33,2025-12-20,0,None
+MPLAD-ABB502,Pune,School Boundary Wall,271784.52,Contractor_20,2025-12-08,0,None
+MPLAD-EF3DE8,Thane,School Boundary Wall,325984.28,Contractor_19,2025-01-22,0,None
+MPLAD-B2F19C,Nashik,Solar Street Light,77781.83,Contractor_37,2025-10-19,0,None
+MPLAD-7870FB,Nagpur,Drinking Water Plant,499127.77,Contractor_19,2025-03-28,0,None
+MPLAD-4EB0DF,Palghar,Drinking Water Plant,453747.49,Contractor_45,2025-02-21,0,None
+MPLAD-0C2F04,Palghar,Community Hall,1682133.91,Contractor_30,2025-06-06,0,None
+MPLAD-DE3E7F,Nagpur,Community Hall,1456534.17,Contractor_48,2025-04-19,0,None
+MPLAD-C42611,Nagpur,Road Repair,886665.13,Contractor_28,2025-08-29,0,None
+MPLAD-DCE7C9,Nashik,Solar Street Light,69160.63,Contractor_37,2025-02-11,0,None
+MPLAD-DFB65A,Palghar,Drinking Water Plant,461608.67,Contractor_41,2025-07-01,0,None
+MPLAD-6D6989,Nagpur,Road Repair,818266.58,Contractor_3,2025-01-11,0,None
+MPLAD-B28322,Pune,School Boundary Wall,281809.83,Contractor_19,2025-09-03,0,None
+MPLAD-325704,Nagpur,School Boundary Wall,285920.87,Contractor_50,2025-11-09,0,None
+MPLAD-C95059,Pune,School Boundary Wall,281192.02,Contractor_5,2025-02-10,0,None
+MPLAD-C09F25,Palghar,Road Repair,798102.75,Contractor_31,2025-04-09,0,None
+MPLAD-6E62E4,Palghar,Road Repair,802816.75,Contractor_23,2025-12-22,0,None
+MPLAD-6616B8,Pune,Solar Street Light,77701.23,Contractor_40,2025-06-24,0,None
+MPLAD-5ACC94,Palghar,School Boundary Wall,294269.07,Contractor_40,2025-04-20,0,None
+MPLAD-170EEE,Thane,School Boundary Wall,307306.49,Contractor_8,2025-02-20,0,None
+MPLAD-E84889,Thane,Drinking Water Plant,529892.9,Contractor_10,2025-04-07,0,None
+MPLAD-EEE26D,Palghar,Drinking Water Plant,549355.62,Contractor_39,2025-02-26,0,None
+MPLAD-7654FF,Palghar,Solar Street Light,71155.2,Contractor_32,2025-06-05,0,None
+MPLAD-7058F1,Palghar,Drinking Water Plant,496539.22,Contractor_21,2025-09-26,0,None
+MPLAD-93647F,Pune,Drinking Water Plant,520828.07,Contractor_15,2025-07-22,0,None
+MPLAD-D9CC58,Thane,Community Hall,1547813.26,Contractor_23,2025-01-08,0,None
+MPLAD-A8B090,Nagpur,Community Hall,1366992.87,Contractor_2,2025-02-10,0,None
+MPLAD-6987C2,Thane,Drinking Water Plant,479189.5,Contractor_15,2025-11-11,0,None
+MPLAD-065E61,Nagpur,Drinking Water Plant,461431.23,Contractor_14,2025-09-13,0,None
+MPLAD-D46A5C,Nashik,Solar Street Light,66635.55,Contractor_37,2025-01-17,0,None
+MPLAD-6E4103,Pune,Road Repair,836555.17,Contractor_25,2025-07-27,0,None
+MPLAD-897FF9,Thane,School Boundary Wall,286198.12,Contractor_45,2025-05-07,0,None
+MPLAD-9FE49E,Palghar,Road Repair,818971.61,Contractor_25,2025-06-23,0,None
+MPLAD-CF3F53,Nagpur,School Boundary Wall,308139.17,Contractor_39,2025-11-16,0,None
+MPLAD-57E89F,Nagpur,Solar Street Light,75136.97,Contractor_12,2025-05-18,0,None
+MPLAD-D02419,Pune,Road Repair,848795.16,Contractor_14,2025-10-07,0,None
+MPLAD-659674,Nagpur,School Boundary Wall,272002.15,Contractor_21,2025-01-31,0,None
+MPLAD-0BAB6B,Nashik,Road Repair,856456.69,Contractor_2,2025-10-08,0,None
+MPLAD-2B0FB8,Palghar,Community Hall,1595728.22,Contractor_8,2025-03-27,0,None
+MPLAD-E59846,Pune,Solar Street Light,229472.47,Contractor_14,2025-10-02,1,Cost Inflation
+MPLAD-76087C,Thane,Drinking Water Plant,476662.3,Contractor_9,2025-10-11,0,None
+MPLAD-29D583,Palghar,Solar Street Light,70815.76,Contractor_30,2025-04-06,0,None
+MPLAD-1888D1,Thane,School Boundary Wall,301761.94,Contractor_24,2025-09-08,0,None
+MPLAD-8DAFA8,Palghar,Solar Street Light,71548.62,Contractor_20,2025-10-14,0,None
+MPLAD-E46603,Nagpur,School Boundary Wall,325241.94,Contractor_23,2025-02-15,0,None
+MPLAD-AC06A3,Nagpur,Community Hall,1520558.54,Contractor_13,2025-04-07,0,None
+MPLAD-D223CE,Nagpur,Road Repair,828922.11,Contractor_43,2025-06-16,0,None
+MPLAD-EBAED7,Pune,School Boundary Wall,319439.21,Contractor_33,2025-10-27,0,None
+MPLAD-54D916,Pune,Community Hall,4598974.62,Contractor_37,2025-03-05,1,Cost Inflation
+MPLAD-258DED,Palghar,School Boundary Wall,295920.92,Contractor_25,2025-10-26,0,None
+MPLAD-A64A09,Thane,School Boundary Wall,305784.55,Contractor_38,2025-06-15,0,None
+MPLAD-134B67,Nashik,School Boundary Wall,280810.8,Contractor_38,2025-12-09,0,None
+MPLAD-678957,Pune,Solar Street Light,80791.35,Contractor_24,2025-12-22,0,None
+MPLAD-67C5C3,Nagpur,Solar Street Light,75559.13,Contractor_38,2025-09-01,0,None
+MPLAD-83B15C,Nashik,Community Hall,1365610.91,Contractor_42,2025-08-22,0,None
+MPLAD-BA2B50,Nagpur,Road Repair,716667.56,Contractor_2,2025-09-05,0,None
+MPLAD-7DA9D6,Pune,Road Repair,740141.63,Contractor_43,2025-01-27,0,None
+MPLAD-59F540,Thane,School Boundary Wall,324328.26,Contractor_16,2025-05-26,0,None
+MPLAD-F4F415,Thane,Drinking Water Plant,478063.38,Contractor_1,2025-01-18,0,None
+MPLAD-CDAB79,Nagpur,Solar Street Light,76837.63,Contractor_33,2025-08-10,0,None
+MPLAD-554BC0,Nagpur,School Boundary Wall,916204.61,Contractor_27,2025-01-18,1,Cost Inflation
+MPLAD-F3E0C8,Nashik,Community Hall,1472048.36,Contractor_7,2025-01-30,0,None
+MPLAD-DB6FEE,Thane,Road Repair,878210.63,Contractor_37,2025-01-17,0,None
+MPLAD-AC7675,Nashik,Community Hall,1648722.58,Contractor_10,2025-10-28,0,None
+MPLAD-C4A160,Nashik,Community Hall,1351724.91,Contractor_30,2025-08-16,0,None
+MPLAD-01E5BE,Nagpur,Road Repair,727255.03,Contractor_1,2025-09-22,0,None
+MPLAD-E18814,Pune,Drinking Water Plant,538900.88,Contractor_9,2025-08-26,0,None
+MPLAD-B93B31,Nagpur,Community Hall,1633375.12,Contractor_50,2025-08-03,0,None
+MPLAD-A122DB,Palghar,Drinking Water Plant,490996.35,Contractor_44,2025-09-23,0,None
+MPLAD-D32543,Nashik,Road Repair,882393.12,Contractor_47,2025-02-06,0,None
+MPLAD-5C2B9D,Nashik,School Boundary Wall,278380.46,Contractor_42,2025-05-28,0,None
+MPLAD-D75A2E,Nagpur,School Boundary Wall,294384.53,Contractor_46,2025-06-10,0,None
+MPLAD-35D54A,Thane,Road Repair,745352.95,Contractor_32,2025-05-19,0,None
+MPLAD-F30970,Pune,School Boundary Wall,299221.92,Contractor_23,2025-08-20,0,None
+MPLAD-2E469E,Nashik,Solar Street Light,69821.7,Contractor_46,2025-09-03,0,None
+MPLAD-7E95D8,Pune,Solar Street Light,76433.77,Contractor_1,2025-04-27,0,None
+MPLAD-0BB6C5,Thane,School Boundary Wall,308734.67,Contractor_3,2025-08-03,0,None
+MPLAD-35A4A5,Nashik,Solar Street Light,70378.39,Contractor_50,2025-08-18,0,None
+MPLAD-3F066F,Nashik,Solar Street Light,81008.9,Contractor_45,2025-06-30,0,None
+MPLAD-198635,Thane,Drinking Water Plant,496066.36,Contractor_49,2025-11-27,0,None
+MPLAD-A6B18D,Nagpur,Solar Street Light,65009.8,Contractor_45,2025-04-24,0,None
+MPLAD-EC35C3,Nagpur,Solar Street Light,70740.87,Contractor_8,2025-03-18,0,None
+MPLAD-7E2638,Pune,Community Hall,1448302.75,Contractor_17,2025-04-26,0,None
+MPLAD-B74D81,Nashik,Community Hall,1673776.59,Contractor_33,2025-05-16,0,None
+MPLAD-193884,Nashik,Solar Street Light,75948.96,Contractor_38,2025-10-01,0,None
+MPLAD-24F57E,Nagpur,Drinking Water Plant,484899.34,Contractor_13,2025-03-28,0,None
+MPLAD-6A252C,Palghar,Community Hall,1690719.37,Contractor_15,2025-06-22,0,None
+MPLAD-4FA150,Pune,Drinking Water Plant,499989.73,Contractor_22,2025-08-31,0,None
+MPLAD-7E1C80,Nashik,School Boundary Wall,271989.84,Contractor_50,2025-11-22,0,None
+MPLAD-E6D668,Nashik,Solar Street Light,82694.19,Contractor_29,2025-11-15,0,None
+MPLAD-0177BB,Nashik,Road Repair,711081.36,Contractor_5,2025-08-02,0,None
+MPLAD-28623C,Pune,Community Hall,1613550.94,Contractor_25,2025-12-08,0,None
+MPLAD-D1F2D8,Nashik,Community Hall,1433433.03,Contractor_42,2025-12-15,0,None
+MPLAD-324DA1,Pune,Drinking Water Plant,512746.24,Contractor_35,2025-04-01,0,None
+MPLAD-AAD9F0,Nagpur,Drinking Water Plant,488268.06,Contractor_40,2025-02-20,0,None
+MPLAD-6EE649,Pune,Drinking Water Plant,464319.46,Contractor_18,2025-03-04,0,None
+MPLAD-B2CA91,Pune,Drinking Water Plant,483530.6,Contractor_22,2025-05-16,0,None
+MPLAD-71BEF8,Palghar,Solar Street Light,370373.13,Contractor_42,2025-09-06,1,Cost Inflation
+MPLAD-35E17F,Pune,School Boundary Wall,304215.46,Contractor_26,2025-05-16,0,None
+MPLAD-D9DF80,Nagpur,Road Repair,895954.04,Contractor_48,2025-01-29,0,None
+MPLAD-32F15C,Palghar,Drinking Water Plant,547808.86,Contractor_24,2025-06-28,0,None
+MPLAD-EF523F,Nashik,Solar Street Light,82161.53,Contractor_23,2025-09-06,0,None
+MPLAD-844043,Thane,Road Repair,825844.27,Contractor_8,2025-09-21,0,None
+MPLAD-BF2357,Palghar,Road Repair,883779.05,Contractor_4,2025-10-22,0,None
+MPLAD-8AA61A,Thane,Drinking Water Plant,531082.14,Contractor_6,2025-04-29,0,None
+MPLAD-49477E,Palghar,Drinking Water Plant,502193.68,Contractor_16,2025-02-05,0,None
+MPLAD-F1F723,Nagpur,Solar Street Light,82246.15,Contractor_39,2025-02-26,0,None
+MPLAD-43DDB4,Thane,Solar Street Light,68471.54,Contractor_39,2025-11-10,0,None
+MPLAD-3DF73B,Thane,Solar Street Light,71258.36,Contractor_48,2025-04-04,0,None
+MPLAD-2ABF77,Palghar,Community Hall,1625910.9,Contractor_48,2025-02-24,0,None
+MPLAD-576ECC,Nashik,Drinking Water Plant,475431.82,Contractor_44,2025-05-25,0,None
+MPLAD-E23FF6,Thane,Community Hall,1554505.83,Contractor_3,2025-08-26,0,None
+MPLAD-5C61AB,Nagpur,School Boundary Wall,317512.44,Contractor_1,2025-05-05,0,None
+MPLAD-8580CB,Thane,Road Repair,887160.85,Contractor_14,2025-12-15,0,None
+MPLAD-B7FF0A,Thane,Solar Street Light,81821.35,Contractor_19,2025-09-23,0,None
+MPLAD-0E9E3D,Thane,Road Repair,749315.36,Contractor_36,2025-02-17,0,None
+MPLAD-F968D4,Nagpur,Road Repair,885311.8,Contractor_41,2025-05-29,0,None
+MPLAD-0AE4E2,Palghar,Road Repair,739068.1,Contractor_31,2025-11-12,0,None
+MPLAD-0EBB19,Nashik,Community Hall,1429475.97,Contractor_46,2025-04-21,0,None
+MPLAD-4864FD,Palghar,Solar Street Light,77800.82,Contractor_37,2025-04-22,0,None
+MPLAD-1F5EE0,Pune,Road Repair,797217.16,Contractor_29,2025-10-10,0,None
+MPLAD-12CA17,Nagpur,Road Repair,3624853.58,Contractor_31,2025-07-14,1,Cost Inflation
+MPLAD-4748F8,Pune,Drinking Water Plant,515570.54,Contractor_23,2025-08-02,0,None
+MPLAD-E970B8,Nashik,School Boundary Wall,315728.05,Contractor_45,2025-05-31,0,None
+MPLAD-90FF41,Palghar,Solar Street Light,67352.13,Contractor_9,2025-09-02,0,None
+MPLAD-47111F,Thane,School Boundary Wall,324042.64,Contractor_5,2025-01-22,0,None
+MPLAD-963CB2,Palghar,Road Repair,858838.72,Contractor_26,2025-06-28,0,None
+MPLAD-020818,Pune,School Boundary Wall,323298.57,Contractor_24,2025-07-02,0,None
+MPLAD-353A7C,Palghar,Road Repair,715676.06,Contractor_48,2025-11-23,0,None
+MPLAD-4A04D8,Nagpur,Drinking Water Plant,526426.17,Contractor_40,2025-03-31,0,None
+MPLAD-ADFAA8,Pune,Drinking Water Plant,543567.32,Contractor_20,2025-10-12,0,None
+MPLAD-47BEFD,Thane,Community Hall,1659354.53,Contractor_12,2025-03-23,0,None
+MPLAD-E7E45D,Thane,Solar Street Light,74886.68,Contractor_13,2025-08-07,0,None
+MPLAD-9D88D9,Nagpur,Community Hall,1479774.42,Contractor_42,2025-01-06,0,None
+MPLAD-A1EC52,Palghar,Road Repair,773748.28,Contractor_31,2025-01-24,0,None
+MPLAD-E3F40E,Nagpur,Drinking Water Plant,465789.71,Contractor_40,2025-01-31,0,None
+MPLAD-4DB512,Palghar,Solar Street Light,74346.68,Contractor_50,2025-11-24,0,None
+MPLAD-78D4EE,Palghar,Solar Street Light,83670.09,Contractor_48,2025-07-08,0,None
+MPLAD-F2C18F,Thane,School Boundary Wall,277728.68,Contractor_20,2025-04-28,0,None
+MPLAD-2F27D0,Pune,Solar Street Light,67564.03,Contractor_23,2025-08-07,0,None
+MPLAD-F65957,Thane,School Boundary Wall,319560.29,Contractor_18,2025-09-24,0,None
+MPLAD-D31FEE,Nashik,Solar Street Light,71895.57,Contractor_25,2025-08-04,0,None
+MPLAD-87BDFD,Nashik,School Boundary Wall,314884.13,Contractor_24,2025-10-14,0,None
+MPLAD-E83B43,Thane,Solar Street Light,81381.82,Contractor_18,2025-11-26,0,None
+MPLAD-8E0CAB,Nashik,School Boundary Wall,275478.19,Contractor_33,2025-03-02,0,None
+MPLAD-0A949B,Thane,Solar Street Light,77216.71,Contractor_7,2025-07-25,0,None
+MPLAD-C21F78,Nagpur,Drinking Water Plant,474353.54,Contractor_2,2025-07-24,0,None
+MPLAD-967DA2,Pune,Community Hall,1600001.01,Contractor_38,2025-05-01,0,None
+MPLAD-BE3C59,Nashik,Road Repair,714137.91,Contractor_40,2025-10-30,0,None
+MPLAD-963477,Pune,Road Repair,801806.4,Contractor_48,2025-09-25,0,None
+MPLAD-694AE8,Nagpur,Solar Street Light,78402.07,Contractor_3,2025-05-16,0,None
+MPLAD-B30652,Palghar,Solar Street Light,73386.48,Contractor_38,2025-01-14,0,None
+MPLAD-E747DF,Pune,Road Repair,734819.08,Contractor_14,2025-01-23,0,None
+MPLAD-139C37,Thane,Solar Street Light,75736.35,Contractor_13,2025-10-14,0,None
+MPLAD-C8E13C,Nagpur,School Boundary Wall,324052.83,Contractor_1,2025-10-15,0,None
+MPLAD-2F1513,Pune,Community Hall,1374776.48,Contractor_6,2025-11-13,0,None
+MPLAD-D2DFCB,Thane,Community Hall,1395892.05,Contractor_41,2025-07-29,0,None
+MPLAD-C84E13,Nashik,Community Hall,1324399.24,Contractor_39,2025-12-29,0,None
+MPLAD-63B19B,Nagpur,Road Repair,769276.89,Contractor_1,2025-12-01,0,None
+MPLAD-B2D94E,Nagpur,Community Hall,1552820.72,Contractor_20,2025-12-13,0,None
+MPLAD-CB3706,Nashik,Drinking Water Plant,523066.04,Contractor_12,2025-09-06,0,None
+MPLAD-567CAC,Thane,Road Repair,869552.62,Contractor_7,2025-10-07,0,None
+MPLAD-DFC4FD,Nashik,Community Hall,1575413.09,Contractor_13,2025-08-06,0,None
+MPLAD-ABA31D,Palghar,Community Hall,1641432.03,Contractor_47,2025-05-22,0,None
+MPLAD-F0BA88,Thane,Community Hall,1317236.27,Contractor_48,2025-12-10,0,None
+MPLAD-4DAED4,Nagpur,Solar Street Light,84138.22,Contractor_50,2025-11-02,0,None
+MPLAD-FCBF0B,Pune,Solar Street Light,84961.17,Contractor_4,2025-02-22,0,None
+MPLAD-048825,Nagpur,Drinking Water Plant,533829.86,Contractor_1,2025-07-21,0,None
+MPLAD-062A6B,Palghar,Road Repair,735056.99,Contractor_31,2025-07-16,0,None
+MPLAD-7B358F,Pune,Road Repair,876708.76,Contractor_3,2025-08-23,0,None
+MPLAD-C114EC,Thane,Solar Street Light,78287.96,Contractor_2,2025-04-11,0,None
+MPLAD-A5F0C4,Nagpur,Drinking Water Plant,486183.66,Contractor_35,2025-04-04,0,None
+MPLAD-157CB5,Thane,Community Hall,1507448.31,Contractor_34,2025-09-17,0,None
+MPLAD-157A98,Pune,Community Hall,1598288.32,Contractor_48,2025-11-26,0,None
+MPLAD-E2BB4D,Palghar,School Boundary Wall,296665.74,Contractor_44,2025-04-02,0,None
+MPLAD-9A70CE,Nagpur,School Boundary Wall,312621.43,Contractor_30,2025-09-25,0,None
+MPLAD-747BC9,Pune,Solar Street Light,72712.07,Contractor_38,2025-06-06,0,None
+MPLAD-2F57FC,Thane,Drinking Water Plant,473178.6,Contractor_29,2025-03-15,0,None
+MPLAD-8C0F45,Nagpur,Road Repair,842413.0,Contractor_48,2025-10-05,0,None
+MPLAD-ED9D0B,Palghar,Road Repair,704734.9,Contractor_9,2025-07-21,0,None
+MPLAD-2DEF8F,Nashik,Community Hall,1648887.06,Contractor_34,2025-12-15,0,None
+MPLAD-5906E7,Thane,School Boundary Wall,275932.17,Contractor_12,2025-02-17,0,None
+MPLAD-48D8E9,Nagpur,Drinking Water Plant,531759.59,Contractor_37,2025-05-26,0,None
+MPLAD-E0FF74,Pune,Road Repair,710050.41,Contractor_46,2025-06-30,0,None
+MPLAD-2B7DE2,Palghar,Community Hall,1429248.05,Contractor_15,2025-04-10,0,None
+MPLAD-2773C2,Nagpur,School Boundary Wall,272449.59,Contractor_25,2025-10-11,0,None
+MPLAD-F69ADC,Palghar,Community Hall,1530680.89,Contractor_19,2025-04-21,0,None
+MPLAD-6A6AFA,Nagpur,School Boundary Wall,289709.76,Contractor_48,2025-03-17,0,None
+MPLAD-3689E8,Palghar,Solar Street Light,77379.06,Contractor_6,2025-12-05,0,None
+MPLAD-6443E0,Nashik,School Boundary Wall,277570.65,Contractor_24,2025-09-08,0,None
+MPLAD-EDEB64,Nashik,School Boundary Wall,314964.93,Contractor_4,2025-11-17,0,None
+MPLAD-6D16B1,Palghar,School Boundary Wall,312335.0,Contractor_2,2025-03-02,0,None
+MPLAD-E43924,Pune,Solar Street Light,73671.8,Contractor_22,2025-05-27,0,None
+MPLAD-536AFF,Pune,Drinking Water Plant,500534.61,Contractor_13,2025-08-16,0,None
+MPLAD-0936D4,Nagpur,Solar Street Light,79783.64,Contractor_43,2025-09-03,0,None
+MPLAD-B8E607,Pune,School Boundary Wall,318799.69,Contractor_5,2025-06-19,0,None
+MPLAD-A1332F,Nashik,Solar Street Light,67309.78,Contractor_17,2025-08-02,0,None
+MPLAD-9D55B1,Nashik,Solar Street Light,65914.29,Contractor_8,2025-04-11,0,None
+MPLAD-FF21C3,Palghar,School Boundary Wall,290295.25,Contractor_28,2025-10-07,0,None
+MPLAD-E1503F,Palghar,Solar Street Light,79544.44,Contractor_50,2025-09-01,0,None
+MPLAD-0EFD25,Palghar,Community Hall,1544822.26,Contractor_13,2025-07-29,0,None
+MPLAD-44EF73,Pune,Community Hall,1444835.82,Contractor_15,2025-10-15,0,None
+MPLAD-042DFB,Palghar,Community Hall,1580694.53,Contractor_48,2025-11-26,0,None
+MPLAD-B44C87,Nagpur,Drinking Water Plant,489248.39,Contractor_20,2025-03-06,0,None
+MPLAD-AD22CA,Thane,Community Hall,1658926.97,Contractor_48,2025-06-12,0,None
+MPLAD-707C6A,Thane,Solar Street Light,80579.75,Contractor_12,2025-03-17,0,None
+MPLAD-0DE177,Nagpur,Drinking Water Plant,545430.38,Contractor_20,2025-08-02,0,None
+MPLAD-9EC437,Nashik,Community Hall,1366860.62,Contractor_12,2025-01-25,0,None
+MPLAD-6F3346,Nashik,Road Repair,834529.33,Contractor_12,2025-02-25,0,None
+MPLAD-445745,Nagpur,School Boundary Wall,297788.54,Contractor_21,2025-10-14,0,None
+MPLAD-E2CB13,Nashik,Drinking Water Plant,544068.34,Contractor_49,2025-07-20,0,None
+MPLAD-CD0163,Thane,Community Hall,4771740.69,Contractor_34,2025-06-17,1,Cost Inflation
+MPLAD-918E6E,Pune,Solar Street Light,78726.25,Contractor_46,2025-12-28,0,None
+MPLAD-62BDC9,Pune,Road Repair,821928.95,Contractor_24,2025-03-19,0,None
+MPLAD-CE43B6,Thane,Drinking Water Plant,548000.86,Contractor_18,2025-09-07,0,None
+MPLAD-7D2C9B,Palghar,Road Repair,880116.48,Contractor_19,2025-03-25,0,None
+MPLAD-0D8FBF,Pune,Road Repair,799645.35,Contractor_7,2025-09-20,0,None
+MPLAD-CC8F7A,Pune,Solar Street Light,82361.48,Contractor_43,2025-02-21,0,None
+MPLAD-28788E,Nagpur,Solar Street Light,74147.48,Contractor_46,2025-04-02,0,None
+MPLAD-BFCB92,Palghar,Road Repair,828810.94,Contractor_11,2025-06-20,0,None
+MPLAD-B9C20C,Palghar,Drinking Water Plant,478998.69,Contractor_18,2025-11-19,0,None
+MPLAD-F319FD,Nashik,Solar Street Light,84975.88,Contractor_10,2025-10-07,0,None
+MPLAD-2D6D32,Thane,Solar Street Light,82837.19,Contractor_24,2025-05-18,0,None
+MPLAD-460ECD,Pune,Drinking Water Plant,482924.42,Contractor_33,2025-10-24,0,None
+MPLAD-CBA608,Nagpur,Drinking Water Plant,512650.68,Contractor_45,2025-03-30,0,None
+MPLAD-41965C,Palghar,Community Hall,1471499.64,Contractor_31,2025-10-17,0,None
+MPLAD-C8CD9B,Nagpur,Road Repair,707959.74,Contractor_50,2025-10-16,0,None
+MPLAD-648210,Nashik,Drinking Water Plant,524805.08,Contractor_11,2025-05-30,0,None
+MPLAD-7BC1FE,Pune,Road Repair,784979.21,Contractor_32,2025-07-26,0,None
+MPLAD-1EEE9B,Palghar,Road Repair,825315.15,Contractor_12,2025-09-22,0,None
+MPLAD-BE559A,Nashik,Road Repair,874156.46,Contractor_40,2025-12-29,0,None
+MPLAD-C12A1E,Pune,School Boundary Wall,274271.55,Contractor_46,2025-11-24,0,None
+MPLAD-332010,Nashik,Road Repair,748783.89,Contractor_40,2025-12-12,0,None
+MPLAD-FE89E4,Palghar,Solar Street Light,79843.76,Contractor_48,2025-12-01,0,None
+MPLAD-16B7EC,Palghar,School Boundary Wall,1104923.97,Contractor_47,2025-04-25,1,Cost Inflation
+MPLAD-F866E7,Palghar,Drinking Water Plant,471911.39,Contractor_34,2025-08-12,0,None
+MPLAD-FCE9A7,Palghar,Solar Street Light,81110.87,Contractor_13,2025-10-09,0,None
+MPLAD-3F8188,Pune,Community Hall,1302145.49,Contractor_35,2025-11-10,0,None
+MPLAD-CF1F4E,Thane,Drinking Water Plant,493042.95,Contractor_35,2025-07-09,0,None
+MPLAD-E21E08,Nagpur,School Boundary Wall,321136.73,Contractor_4,2025-09-21,0,None
+MPLAD-50D8BA,Nagpur,School Boundary Wall,299959.23,Contractor_15,2025-06-13,0,None
+MPLAD-E7ED1A,Nashik,Drinking Water Plant,527691.82,Contractor_42,2025-08-17,0,None
+MPLAD-307654,Pune,Solar Street Light,76695.4,Contractor_26,2025-07-31,0,None
+MPLAD-E55D68,Nashik,School Boundary Wall,1277146.81,Contractor_47,2025-09-27,1,Cost Inflation
+MPLAD-2D785C,Nashik,Solar Street Light,84590.42,Contractor_34,2025-12-08,0,None
+MPLAD-F7E8FF,Pune,Road Repair,781198.42,Contractor_13,2025-04-07,0,None
+MPLAD-D27150,Palghar,Community Hall,1592824.57,Contractor_43,2025-12-21,0,None
+MPLAD-778CBB,Thane,Drinking Water Plant,524596.74,Contractor_7,2025-05-03,0,None
+MPLAD-A4EF50,Nashik,Community Hall,1432742.0,Contractor_26,2025-08-24,0,None
+MPLAD-480D62,Thane,Road Repair,788885.04,Contractor_17,2025-06-10,0,None
+MPLAD-4B64F1,Thane,School Boundary Wall,281596.32,Contractor_39,2025-07-28,0,None
+MPLAD-D1B5C8,Palghar,Drinking Water Plant,521819.74,Contractor_47,2025-06-23,0,None
+MPLAD-D87182,Nagpur,Community Hall,1541133.4,Contractor_19,2025-02-14,0,None
+MPLAD-E31D25,Thane,Solar Street Light,278161.04,Contractor_16,2025-07-18,1,Cost Inflation
+MPLAD-4D3A55,Pune,Drinking Water Plant,513287.35,Contractor_26,2025-05-07,0,None
+MPLAD-A9378C,Thane,Community Hall,1672157.07,Contractor_13,2025-08-08,0,None
+MPLAD-0BC06A,Pune,Drinking Water Plant,474999.07,Contractor_12,2025-10-16,0,None
+MPLAD-56C9DB,Pune,Community Hall,1464593.98,Contractor_2,2025-03-18,0,None
+MPLAD-B267D0,Palghar,Solar Street Light,74920.64,Contractor_15,2025-04-18,0,None
+MPLAD-20163E,Nashik,Solar Street Light,67278.69,Contractor_3,2025-02-14,0,None
+MPLAD-59D10C,Palghar,Road Repair,816733.1,Contractor_19,2025-05-18,0,None
+MPLAD-BCE0F7,Pune,Road Repair,756706.44,Contractor_15,2025-11-17,0,None
+MPLAD-A9D23C,Nagpur,Drinking Water Plant,516893.85,Contractor_23,2025-08-22,0,None
+MPLAD-087AEA,Nagpur,Community Hall,1443235.88,Contractor_49,2025-04-27,0,None
+MPLAD-ACD9BA,Nashik,Road Repair,860543.21,Contractor_18,2025-09-18,0,None
+MPLAD-7FAB72,Thane,Community Hall,1598265.52,Contractor_31,2025-10-01,0,None
+MPLAD-EEC3E3,Palghar,Drinking Water Plant,534245.95,Contractor_39,2025-12-09,0,None
+MPLAD-2C4ED2,Pune,School Boundary Wall,283271.6,Contractor_7,2025-10-17,0,None
+MPLAD-16B107,Nashik,Road Repair,865725.16,Contractor_48,2025-01-14,0,None
+MPLAD-F11689,Pune,School Boundary Wall,321890.34,Contractor_1,2025-03-02,0,None
+MPLAD-436987,Thane,School Boundary Wall,302342.93,Contractor_2,2025-03-16,0,None
+MPLAD-EA5D65,Nagpur,Solar Street Light,67141.37,Contractor_26,2025-11-22,0,None
+MPLAD-1F6515,Nagpur,Community Hall,1364718.25,Contractor_14,2025-08-09,0,None
+MPLAD-F9013D,Pune,School Boundary Wall,271163.23,Contractor_31,2025-09-20,0,None
+MPLAD-20844A,Palghar,Solar Street Light,320574.18,Contractor_3,2025-01-29,1,Cost Inflation
+MPLAD-DDB9CC,Thane,Community Hall,1548300.51,Contractor_45,2025-05-29,0,None
+MPLAD-7509B3,Thane,Solar Street Light,70269.19,Contractor_17,2025-04-09,0,None
+MPLAD-25A128,Nashik,School Boundary Wall,310389.34,Contractor_28,2025-12-20,0,None
+MPLAD-FA1ECF,Thane,Road Repair,789569.36,Contractor_9,2025-01-14,0,None
+MPLAD-5EC022,Thane,Road Repair,720319.59,Contractor_49,2025-04-05,0,None
+MPLAD-B13914,Nagpur,School Boundary Wall,280617.12,Contractor_33,2025-10-29,0,None
+MPLAD-ABF79A,Palghar,School Boundary Wall,285313.78,Contractor_1,2025-10-10,0,None
+MPLAD-0B3F86,Nashik,Community Hall,1599863.2,Contractor_2,2025-10-13,0,None
+MPLAD-0C91AC,Thane,School Boundary Wall,294246.25,Contractor_27,2025-08-27,0,None
+MPLAD-445BA1,Palghar,School Boundary Wall,291406.47,Contractor_17,2025-08-17,0,None
+MPLAD-B20C5F,Thane,Drinking Water Plant,460579.62,Contractor_18,2025-09-07,0,None
+MPLAD-CD8FE4,Nagpur,Solar Street Light,66179.83,Contractor_27,2025-04-02,0,None
+MPLAD-DC2650,Palghar,Solar Street Light,66334.49,Contractor_24,2025-08-26,0,None
+MPLAD-0CBDBB,Nashik,Community Hall,1673728.03,Contractor_47,2025-06-04,0,None
+MPLAD-1A63F6,Palghar,Solar Street Light,84653.46,Contractor_9,2025-07-07,0,None
+MPLAD-A8025F,Nagpur,Community Hall,1592599.76,Contractor_50,2025-10-31,0,None
+MPLAD-1D5FC2,Palghar,School Boundary Wall,1321613.66,Contractor_33,2025-01-20,1,Cost Inflation
+MPLAD-B74D28,Nashik,Road Repair,742777.5,Contractor_35,2025-07-04,0,None
+MPLAD-DA968D,Nagpur,Drinking Water Plant,502833.55,Contractor_21,2025-11-09,0,None
+MPLAD-B6BF0D,Pune,Drinking Water Plant,518806.3,Contractor_5,2025-12-10,0,None
+MPLAD-F4CC10,Pune,Road Repair,777239.68,Contractor_17,2025-11-03,0,None
+MPLAD-8A966F,Palghar,School Boundary Wall,295384.64,Contractor_24,2025-06-15,0,None
+MPLAD-B624B1,Nagpur,Community Hall,1390910.31,Contractor_10,2025-10-20,0,None
+MPLAD-E7BCBA,Palghar,Community Hall,1360494.58,Contractor_11,2025-04-25,0,None
+MPLAD-6773CB,Pune,Community Hall,1356364.52,Contractor_13,2025-05-24,0,None
+MPLAD-845F12,Thane,Road Repair,894067.22,Contractor_46,2025-03-14,0,None
+MPLAD-FF4487,Pune,School Boundary Wall,294676.92,Contractor_37,2025-12-27,0,None
+MPLAD-A1EC8A,Thane,Road Repair,729716.34,Contractor_8,2025-05-26,0,None
+MPLAD-835968,Nagpur,Community Hall,1589032.13,Contractor_43,2025-06-09,0,None
+MPLAD-1C137F,Nagpur,Solar Street Light,84374.22,Contractor_10,2025-10-28,0,None
+MPLAD-6746B1,Palghar,Road Repair,756473.33,Contractor_21,2025-09-21,0,None
+MPLAD-BF1819,Nagpur,Road Repair,879399.55,Contractor_29,2025-06-30,0,None
+MPLAD-66B2AE,Pune,Community Hall,1329030.8,Contractor_25,2025-08-03,0,None
+MPLAD-FB129C,Nagpur,Road Repair,855718.1,Contractor_23,2025-03-02,0,None
+MPLAD-1377FF,Nashik,Community Hall,1362939.64,Contractor_10,2025-10-29,0,None
+MPLAD-B5C229,Thane,Drinking Water Plant,535841.45,Contractor_13,2025-03-25,0,None
+MPLAD-BFACE8,Nagpur,School Boundary Wall,290942.3,Contractor_16,2025-03-10,0,None
+MPLAD-46356B,Nagpur,Drinking Water Plant,549537.62,Contractor_47,2025-05-30,0,None
+MPLAD-E645FB,Thane,Drinking Water Plant,499971.37,Contractor_42,2025-01-17,0,None
+MPLAD-6C21B1,Nagpur,Drinking Water Plant,507475.72,Contractor_11,2025-12-29,0,None
+MPLAD-BECA4F,Nagpur,Solar Street Light,68283.42,Contractor_34,2026-01-01,0,None
+MPLAD-492FE6,Nashik,Solar Street Light,83658.19,Contractor_39,2025-03-27,0,None
+MPLAD-5520D2,Palghar,Drinking Water Plant,451571.94,Contractor_22,2025-02-08,0,None
+MPLAD-AB5B47,Palghar,Drinking Water Plant,535780.43,Contractor_21,2025-01-25,0,None
+MPLAD-85CBB5,Thane,Drinking Water Plant,496824.73,Contractor_28,2025-11-22,0,None
+MPLAD-053889,Thane,Drinking Water Plant,476487.04,Contractor_47,2025-11-16,0,None
+MPLAD-FE9D9C,Thane,Drinking Water Plant,547467.75,Contractor_32,2025-09-18,0,None
+MPLAD-7896FA,Palghar,Community Hall,1653597.18,Contractor_14,2025-03-04,0,None
+MPLAD-A2D3D1,Pune,Road Repair,799948.27,Contractor_40,2025-07-25,0,None
+MPLAD-E349EB,Thane,Drinking Water Plant,548878.75,Contractor_4,2025-04-29,0,None
+MPLAD-DF01C0,Nagpur,Community Hall,1404303.6,Contractor_11,2025-01-17,0,None
+MPLAD-7D9701,Thane,Community Hall,1690349.37,Contractor_22,2025-01-12,0,None
+MPLAD-BA0377,Palghar,School Boundary Wall,289432.1,Contractor_5,2025-10-18,0,None
+MPLAD-538ED6,Thane,School Boundary Wall,277841.59,Contractor_39,2025-12-25,0,None
+MPLAD-19CE41,Thane,Solar Street Light,84098.18,Contractor_50,2025-01-29,0,None
+MPLAD-4466CB,Palghar,School Boundary Wall,314553.9,Contractor_49,2025-03-11,0,None
+MPLAD-F2B50D,Palghar,Community Hall,1323345.03,Contractor_32,2025-12-23,0,None
+MPLAD-B47EB0,Nashik,Solar Street Light,71429.58,Contractor_24,2025-05-29,0,None
+MPLAD-FEE6AC,Nagpur,Road Repair,868290.41,Contractor_1,2025-06-13,0,None
+MPLAD-E50283,Pune,Community Hall,5996270.01,Contractor_18,2025-01-07,1,Cost Inflation
+MPLAD-E32E43,Palghar,School Boundary Wall,295252.57,Contractor_35,2025-03-10,0,None
+MPLAD-3EFC3C,Nagpur,Road Repair,761658.13,Contractor_16,2025-08-24,0,None
+MPLAD-9A2F45,Nashik,Road Repair,702223.18,Contractor_41,2025-09-28,0,None
+MPLAD-93BEA2,Thane,School Boundary Wall,1104056.48,Contractor_13,2025-02-16,1,Cost Inflation
+MPLAD-6C37C8,Palghar,Community Hall,1450246.59,Contractor_25,2025-04-02,0,None
+MPLAD-FC976A,Nashik,School Boundary Wall,319000.13,Contractor_18,2025-03-13,0,None
+MPLAD-4E5719,Thane,Drinking Water Plant,528964.94,Contractor_10,2025-05-16,0,None
+MPLAD-860CC0,Pune,Solar Street Light,77657.46,Contractor_39,2025-08-20,0,None
+MPLAD-559801,Nashik,Drinking Water Plant,2077689.72,Contractor_15,2025-08-20,1,Cost Inflation
+MPLAD-75B97D,Pune,School Boundary Wall,277545.79,Contractor_28,2025-11-10,0,None
+MPLAD-09FAE7,Nagpur,Road Repair,727683.82,Contractor_16,2025-01-22,0,None
+MPLAD-F498A6,Thane,Drinking Water Plant,541056.2,Contractor_3,2025-02-05,0,None
+MPLAD-3F1355,Pune,Community Hall,1544430.42,Contractor_1,2025-04-17,0,None
+MPLAD-4E2101,Nagpur,Road Repair,821588.05,Contractor_20,2025-07-25,0,None
+MPLAD-17726B,Palghar,Community Hall,1439110.39,Contractor_16,2025-10-15,0,None
+MPLAD-D4A912,Thane,Drinking Water Plant,535454.24,Contractor_13,2025-07-07,0,None
+MPLAD-D228E2,Nashik,Community Hall,1517970.54,Contractor_18,2025-04-04,0,None
+MPLAD-04DADD,Nashik,Solar Street Light,71253.71,Contractor_10,2025-09-19,0,None
+MPLAD-A057E5,Pune,Solar Street Light,83006.11,Contractor_4,2025-09-17,0,None
+MPLAD-DDFE3F,Thane,Community Hall,1387085.61,Contractor_15,2025-11-04,0,None
+MPLAD-0D60BE,Pune,Drinking Water Plant,493274.24,Contractor_8,2025-01-23,0,None
+MPLAD-E058CE,Thane,Solar Street Light,82884.3,Contractor_44,2025-03-15,0,None
+MPLAD-3AD46F,Thane,Community Hall,1605267.11,Contractor_48,2025-08-14,0,None
+MPLAD-B8B56D,Pune,Road Repair,788680.01,Contractor_7,2025-11-27,0,None
+MPLAD-AA6B72,Nashik,Solar Street Light,65513.98,Contractor_34,2025-07-31,0,None
+MPLAD-231848,Pune,Community Hall,1659769.26,Contractor_35,2025-09-16,0,None
+MPLAD-405381,Thane,Road Repair,744114.99,Contractor_48,2025-10-31,0,None
+MPLAD-BF4E48,Pune,Road Repair,700644.47,Contractor_50,2025-02-13,0,None
+MPLAD-4A4F0E,Nashik,Community Hall,1510699.29,Contractor_44,2025-08-07,0,None
+MPLAD-203167,Palghar,School Boundary Wall,315302.97,Contractor_25,2025-11-29,0,None
+MPLAD-9E94E4,Pune,Drinking Water Plant,545112.86,Contractor_10,2025-04-03,0,None
+MPLAD-51A0EB,Palghar,School Boundary Wall,274054.74,Contractor_11,2025-09-27,0,None
+MPLAD-D0AC15,Nagpur,School Boundary Wall,314340.02,Contractor_3,2025-01-06,0,None
+MPLAD-248D4F,Pune,Solar Street Light,73453.93,Contractor_28,2025-11-06,0,None
+MPLAD-F397E1,Nagpur,Community Hall,1447418.81,Contractor_35,2025-09-18,0,None
+MPLAD-B419FD,Palghar,School Boundary Wall,281248.21,Contractor_20,2025-03-06,0,None
+MPLAD-725CC3,Pune,Solar Street Light,79064.89,Contractor_22,2025-04-19,0,None
+MPLAD-F5AE0A,Palghar,School Boundary Wall,287055.58,Contractor_42,2025-12-01,0,None
+MPLAD-2A45FD,Nagpur,Solar Street Light,68167.09,Contractor_6,2025-08-29,0,None
+MPLAD-783E38,Pune,Community Hall,1571107.01,Contractor_49,2025-09-12,0,None
+MPLAD-16F9BB,Pune,Drinking Water Plant,458445.66,Contractor_40,2025-03-09,0,None
+MPLAD-913163,Nashik,Road Repair,837724.91,Contractor_18,2025-06-10,0,None
+MPLAD-52462B,Nashik,School Boundary Wall,283552.78,Contractor_50,2025-09-08,0,None
+MPLAD-C69632,Thane,School Boundary Wall,326204.31,Contractor_28,2025-11-06,0,None
+MPLAD-0A2310,Thane,School Boundary Wall,309932.02,Contractor_39,2025-07-21,0,None
+MPLAD-1839FB,Nashik,Solar Street Light,71458.06,Contractor_14,2025-09-07,0,None
+MPLAD-442751,Palghar,School Boundary Wall,296362.74,Contractor_17,2025-02-24,0,None
+MPLAD-24CC30,Pune,Solar Street Light,72412.82,Contractor_12,2025-05-29,0,None
+MPLAD-DB2AD0,Thane,School Boundary Wall,313705.8,Contractor_36,2025-05-24,0,None
+MPLAD-1B3B1F,Palghar,School Boundary Wall,284602.16,Contractor_33,2025-01-11,0,None
+MPLAD-824B0D,Palghar,Solar Street Light,74894.61,Contractor_4,2025-08-19,0,None
+MPLAD-AE13FF,Thane,School Boundary Wall,309199.95,Contractor_17,2025-11-25,0,None
+MPLAD-A3579A,Palghar,School Boundary Wall,300348.03,Contractor_16,2025-12-26,0,None
+MPLAD-8C1635,Nashik,Road Repair,768560.15,Contractor_37,2025-04-22,0,None
+MPLAD-41EAD6,Thane,Solar Street Light,70819.74,Contractor_22,2025-03-24,0,None
+MPLAD-1AC28D,Thane,Road Repair,759584.39,Contractor_50,2025-02-03,0,None
+MPLAD-1B88F2,Thane,Drinking Water Plant,2194372.98,Contractor_35,2025-12-02,1,Cost Inflation
+MPLAD-1CECE6,Palghar,Community Hall,1379316.46,Contractor_9,2025-02-16,0,None
+MPLAD-A072EF,Palghar,Solar Street Light,68125.9,Contractor_45,2025-06-06,0,None
+MPLAD-C05F0E,Thane,Community Hall,1584362.91,Contractor_6,2025-02-19,0,None
+MPLAD-4B3605,Nagpur,Community Hall,1633791.42,Contractor_7,2025-04-24,0,None
+MPLAD-8845CB,Nashik,Community Hall,1630844.06,Contractor_31,2025-03-28,0,None
+MPLAD-E22106,Pune,School Boundary Wall,296385.91,Contractor_42,2025-01-03,0,None
+MPLAD-E10AEB,Thane,Drinking Water Plant,535815.1,Contractor_25,2025-03-15,0,None
+MPLAD-5EA375,Palghar,School Boundary Wall,305526.23,Contractor_48,2025-01-05,0,None
+MPLAD-218875,Nashik,Community Hall,1537509.76,Contractor_7,2025-04-25,0,None
+MPLAD-58545C,Nagpur,School Boundary Wall,329987.4,Contractor_33,2025-05-05,0,None
+MPLAD-025CF3,Pune,Road Repair,845134.12,Contractor_12,2025-03-07,0,None
+MPLAD-44AF06,Palghar,Drinking Water Plant,480734.53,Contractor_24,2025-06-04,0,None
+MPLAD-A75F71,Nashik,Solar Street Light,72985.77,Contractor_29,2025-01-17,0,None
+MPLAD-35BAF4,Thane,Solar Street Light,76185.25,Contractor_43,2025-08-23,0,None
+MPLAD-EB14B5,Nashik,Drinking Water Plant,537989.48,Contractor_18,2025-04-11,0,None
+MPLAD-92D658,Nashik,Road Repair,710368.35,Contractor_8,2025-06-17,0,None
+MPLAD-0F5691,Nashik,Solar Street Light,79886.56,Contractor_11,2025-07-13,0,None
+MPLAD-52701D,Thane,Solar Street Light,81541.55,Contractor_6,2025-03-21,0,None
+MPLAD-7EF5D0,Thane,Community Hall,1384452.37,Contractor_13,2025-10-11,0,None
+MPLAD-47AC0D,Palghar,Community Hall,1658064.24,Contractor_32,2025-01-09,0,None
+MPLAD-91F475,Thane,Solar Street Light,83797.39,Contractor_40,2025-03-11,0,None
+MPLAD-076FFF,Nashik,Solar Street Light,81807.7,Contractor_26,2025-03-05,0,None
+MPLAD-78E65D,Pune,School Boundary Wall,275396.94,Contractor_39,2025-06-01,0,None
+MPLAD-A1599A,Palghar,School Boundary Wall,275123.43,Contractor_45,2025-09-25,0,None
+MPLAD-E303D4,Pune,School Boundary Wall,308632.44,Contractor_46,2025-08-16,0,None
+MPLAD-328C25,Nagpur,Road Repair,2915644.79,Contractor_18,2025-09-23,1,Cost Inflation
+MPLAD-47227B,Thane,Solar Street Light,83324.34,Contractor_40,2025-03-21,0,None
+MPLAD-79D2E5,Pune,Road Repair,893407.68,Contractor_28,2025-04-25,0,None
+MPLAD-493B06,Pune,School Boundary Wall,327290.8,Contractor_10,2025-02-23,0,None
+MPLAD-166726,Nagpur,Solar Street Light,83678.52,Contractor_37,2025-03-09,0,None
+MPLAD-96F149,Thane,Solar Street Light,72169.16,Contractor_22,2025-01-20,0,None
+MPLAD-EF38AF,Pune,School Boundary Wall,316061.71,Contractor_43,2025-12-24,0,None
+MPLAD-11E2AE,Pune,Solar Street Light,65130.4,Contractor_11,2025-09-23,0,None
+MPLAD-FAB3A5,Nagpur,School Boundary Wall,320059.32,Contractor_15,2025-04-26,0,None
+MPLAD-23286E,Pune,Drinking Water Plant,459109.55,Contractor_44,2025-06-10,0,None
+MPLAD-7945D8,Palghar,Solar Street Light,72954.03,Contractor_36,2025-02-26,0,None
+MPLAD-11B121,Nashik,Community Hall,1467252.75,Contractor_19,2025-02-08,0,None
+MPLAD-CD313B,Pune,Road Repair,3365360.24,Contractor_43,2025-04-13,1,Cost Inflation
+MPLAD-0B01FD,Nagpur,School Boundary Wall,301532.49,Contractor_15,2025-10-27,0,None
+MPLAD-4215A0,Nashik,Solar Street Light,72788.44,Contractor_8,2025-07-12,0,None
+MPLAD-30B969,Nashik,Drinking Water Plant,487455.61,Contractor_44,2025-07-26,0,None
+MPLAD-2880BD,Nagpur,Drinking Water Plant,521297.69,Contractor_30,2025-01-20,0,None
+MPLAD-218EAF,Palghar,Road Repair,712578.89,Contractor_8,2025-08-04,0,None
+MPLAD-40E9BA,Palghar,Drinking Water Plant,1749889.8,Contractor_20,2025-03-01,1,Cost Inflation
+MPLAD-647634,Thane,Road Repair,861725.21,Contractor_27,2025-01-06,0,None
+MPLAD-A7970C,Thane,Community Hall,1339748.41,Contractor_1,2025-11-06,0,None
+MPLAD-00610C,Pune,Solar Street Light,78468.52,Contractor_14,2025-09-18,0,None
+MPLAD-7DB483,Thane,Solar Street Light,270364.74,Contractor_27,2025-07-01,1,Cost Inflation
+MPLAD-2BE222,Pune,Solar Street Light,72703.98,Contractor_12,2025-04-27,0,None
+MPLAD-B5FD85,Palghar,Road Repair,843293.99,Contractor_23,2025-07-03,0,None
+MPLAD-0AFDBF,Thane,Road Repair,704125.64,Contractor_8,2025-11-10,0,None
+MPLAD-3D6612,Pune,School Boundary Wall,297060.1,Contractor_1,2025-03-22,0,None
+MPLAD-1F5F80,Nashik,Solar Street Light,80167.66,Contractor_31,2025-01-14,0,None
+MPLAD-049DF9,Pune,School Boundary Wall,273814.05,Contractor_47,2025-07-10,0,None
+MPLAD-B1AFCA,Palghar,Solar Street Light,74990.77,Contractor_24,2025-12-31,0,None
+MPLAD-F56414,Pune,Community Hall,1563245.37,Contractor_25,2025-09-13,0,None
+MPLAD-1438CA,Thane,Drinking Water Plant,487824.53,Contractor_38,2025-05-03,0,None
+MPLAD-FF1D91,Thane,School Boundary Wall,272362.52,Contractor_44,2025-12-09,0,None
+MPLAD-9073DE,Nagpur,Community Hall,1615763.03,Contractor_8,2025-06-20,0,None
+MPLAD-6C96E2,Nashik,Community Hall,1301419.48,Contractor_22,2025-02-20,0,None
+MPLAD-EBECEE,Nagpur,School Boundary Wall,289615.74,Contractor_26,2025-09-15,0,None
+MPLAD-97B79E,Palghar,Road Repair,960404.12,Contractor_42,2025-10-12,1,Tender Splitting
+MPLAD-F73C2B,Palghar,Road Repair,974944.88,Contractor_42,2025-10-12,1,Tender Splitting
+MPLAD-67DC7F,Palghar,Road Repair,971643.45,Contractor_42,2025-10-12,1,Tender Splitting
+MPLAD-00A9C8,Palghar,Road Repair,950532.56,Contractor_42,2025-10-12,1,Tender Splitting
+MPLAD-3F74DF,Nagpur,Road Repair,984767.32,Contractor_22,2025-01-18,1,Tender Splitting
+MPLAD-E8D5A6,Nagpur,Road Repair,992372.51,Contractor_22,2025-01-18,1,Tender Splitting
+MPLAD-6EF8B2,Nagpur,Road Repair,981682.64,Contractor_22,2025-01-18,1,Tender Splitting
+MPLAD-E2486F,Nagpur,Road Repair,988400.91,Contractor_22,2025-01-18,1,Tender Splitting
+MPLAD-672D54,Thane,Road Repair,994924.37,Contractor_16,2025-11-06,1,Tender Splitting
+MPLAD-10E878,Thane,Road Repair,968520.79,Contractor_16,2025-11-06,1,Tender Splitting
+MPLAD-82FBAC,Thane,Road Repair,960130.96,Contractor_16,2025-11-06,1,Tender Splitting
+MPLAD-7285C4,Thane,Road Repair,978068.77,Contractor_16,2025-11-06,1,Tender Splitting
+MPLAD-E110B5,Thane,Road Repair,972208.83,Contractor_16,2025-11-06,1,Tender Splitting
+MPLAD-D32229,Nashik,Road Repair,959793.33,Contractor_15,2025-10-26,1,Tender Splitting
+MPLAD-7676A8,Nashik,Road Repair,976432.83,Contractor_15,2025-10-26,1,Tender Splitting
+MPLAD-6BDC66,Nashik,Road Repair,955745.71,Contractor_15,2025-10-26,1,Tender Splitting
+MPLAD-77A734,Palghar,Road Repair,971382.39,Contractor_42,2025-10-30,1,Tender Splitting
+MPLAD-C2EFBA,Palghar,Road Repair,975675.37,Contractor_42,2025-10-30,1,Tender Splitting
+MPLAD-8D61EA,Palghar,Road Repair,966031.38,Contractor_42,2025-10-30,1,Tender Splitting
+MPLAD-2BA285,Palghar,Road Repair,990777.54,Contractor_42,2025-10-30,1,Tender Splitting
+MPLAD-57792F,Palghar,Road Repair,974887.22,Contractor_42,2025-10-30,1,Tender Splitting
+MPLAD-41A32C,Nagpur,Road Repair,984548.59,Contractor_35,2025-06-06,1,Tender Splitting
+MPLAD-FE58AD,Nagpur,Road Repair,954248.8,Contractor_35,2025-06-06,1,Tender Splitting
+MPLAD-9CD869,Nagpur,Road Repair,981273.67,Contractor_35,2025-06-06,1,Tender Splitting
+MPLAD-A60CF5,Nagpur,Road Repair,986890.03,Contractor_35,2025-06-06,1,Tender Splitting
+MPLAD-459BF1,Nagpur,Road Repair,985371.79,Contractor_35,2025-06-06,1,Tender Splitting
+MPLAD-4DA28F,Pune,Road Repair,953165.78,Contractor_14,2025-12-26,1,Tender Splitting
+MPLAD-7CB03A,Pune,Road Repair,960566.72,Contractor_14,2025-12-26,1,Tender Splitting
+MPLAD-2D6C38,Pune,Road Repair,969123.75,Contractor_14,2025-12-26,1,Tender Splitting
+MPLAD-0C29DC,Thane,Road Repair,952714.9,Contractor_19,2025-09-24,1,Tender Splitting
+MPLAD-05C1D9,Thane,Road Repair,951602.67,Contractor_19,2025-09-24,1,Tender Splitting
+MPLAD-AC6497,Thane,Road Repair,976072.58,Contractor_19,2025-09-24,1,Tender Splitting
+MPLAD-B40489,Thane,Road Repair,971797.24,Contractor_19,2025-09-24,1,Tender Splitting
+MPLAD-2833E8,Thane,Road Repair,993880.97,Contractor_19,2025-09-24,1,Tender Splitting
+MPLAD-88F295,Nagpur,Road Repair,965408.91,Contractor_18,2025-08-11,1,Tender Splitting
+MPLAD-CB2297,Nagpur,Road Repair,979630.44,Contractor_18,2025-08-11,1,Tender Splitting
+MPLAD-613DFE,Nagpur,Road Repair,989821.82,Contractor_18,2025-08-11,1,Tender Splitting
+MPLAD-8F3774,Pune,Road Repair,971604.08,Contractor_41,2025-12-08,1,Tender Splitting
+MPLAD-387F9F,Pune,Road Repair,977039.59,Contractor_41,2025-12-08,1,Tender Splitting
+MPLAD-5CB0C3,Pune,Road Repair,975021.7,Contractor_41,2025-12-08,1,Tender Splitting
+MPLAD-F5CD2B,Pune,Road Repair,987935.98,Contractor_3,2025-08-16,1,Tender Splitting
+MPLAD-6B3E66,Pune,Road Repair,968556.97,Contractor_3,2025-08-16,1,Tender Splitting
+MPLAD-919148,Pune,Road Repair,969612.01,Contractor_3,2025-08-16,1,Tender Splitting
+MPLAD-133D20,Nagpur,Road Repair,963424.11,Contractor_3,2025-06-08,1,Tender Splitting
+MPLAD-668EE0,Nagpur,Road Repair,959015.35,Contractor_3,2025-06-08,1,Tender Splitting
+MPLAD-C0F4CC,Nagpur,Road Repair,960627.72,Contractor_3,2025-06-08,1,Tender Splitting
+MPLAD-713B6E,Nagpur,Road Repair,956406.31,Contractor_3,2025-06-08,1,Tender Splitting
+MPLAD-85DB9E,Nashik,Road Repair,978441.28,Contractor_5,2025-04-25,1,Tender Splitting
+MPLAD-24B013,Nashik,Road Repair,973804.84,Contractor_5,2025-04-25,1,Tender Splitting
+MPLAD-78BE3A,Nashik,Road Repair,977297.69,Contractor_5,2025-04-25,1,Tender Splitting
+MPLAD-44821B,Nashik,Road Repair,975085.0,Contractor_5,2025-04-25,1,Tender Splitting
+MPLAD-6581A5,Nashik,Road Repair,993750.27,Contractor_5,2025-04-25,1,Tender Splitting
+MPLAD-5D4C18,Thane,Road Repair,966351.04,Contractor_45,2025-03-30,1,Tender Splitting
+MPLAD-EAED4A,Thane,Road Repair,956980.34,Contractor_45,2025-03-30,1,Tender Splitting
+MPLAD-574839,Thane,Road Repair,976265.56,Contractor_45,2025-03-30,1,Tender Splitting
+MPLAD-C53A92,Thane,Road Repair,955268.15,Contractor_45,2025-03-30,1,Tender Splitting
+MPLAD-60BEC1,Thane,Road Repair,954330.39,Contractor_26,2025-07-13,1,Tender Splitting
+MPLAD-CF7480,Thane,Road Repair,972197.76,Contractor_26,2025-07-13,1,Tender Splitting
+MPLAD-F26563,Thane,Road Repair,971551.14,Contractor_26,2025-07-13,1,Tender Splitting
+MPLAD-A371CF,Thane,Road Repair,957859.4,Contractor_26,2025-07-13,1,Tender Splitting
+MPLAD-30BFDB,Thane,Road Repair,972262.62,Contractor_26,2025-07-13,1,Tender Splitting
+MPLAD-73E756,Palghar,Road Repair,984298.62,Contractor_37,2025-08-11,1,Tender Splitting
+MPLAD-C4C900,Palghar,Road Repair,954415.22,Contractor_37,2025-08-11,1,Tender Splitting
+MPLAD-59BA66,Palghar,Road Repair,987798.56,Contractor_37,2025-08-11,1,Tender Splitting
+MPLAD-0A6007,Pune,Road Repair,974306.78,Contractor_13,2025-02-14,1,Tender Splitting
+MPLAD-A375AC,Pune,Road Repair,957459.99,Contractor_13,2025-02-14,1,Tender Splitting
+MPLAD-01AE06,Pune,Road Repair,983945.26,Contractor_13,2025-02-14,1,Tender Splitting
+MPLAD-36DA88,Pune,Road Repair,992207.59,Contractor_13,2025-02-14,1,Tender Splitting
+MPLAD-4E048D,Pune,Road Repair,972168.81,Contractor_13,2025-02-14,1,Tender Splitting
+MPLAD-455132,Nashik,Road Repair,991901.22,Contractor_6,2025-11-16,1,Tender Splitting
+MPLAD-9075A1,Nashik,Road Repair,951557.15,Contractor_6,2025-11-16,1,Tender Splitting
+MPLAD-FEE5DE,Nashik,Road Repair,962416.29,Contractor_6,2025-11-16,1,Tender Splitting
+MPLAD-A388DC,Pune,Road Repair,973473.88,Contractor_33,2025-09-19,1,Tender Splitting
+MPLAD-ED157C,Pune,Road Repair,950167.09,Contractor_33,2025-09-19,1,Tender Splitting
+MPLAD-DBA9D9,Pune,Road Repair,971817.92,Contractor_33,2025-09-19,1,Tender Splitting
+MPLAD-4B4853,Pune,Road Repair,969972.02,Contractor_33,2025-09-19,1,Tender Splitting
+MPLAD-04C41A,Pune,Road Repair,959223.03,Contractor_33,2025-09-19,1,Tender Splitting
+MPLAD-F1BED2,Nagpur,Road Repair,990330.57,Contractor_46,2025-06-24,1,Tender Splitting
+MPLAD-ED3570,Nagpur,Road Repair,964315.42,Contractor_46,2025-06-24,1,Tender Splitting
+MPLAD-152B58,Nagpur,Road Repair,968999.33,Contractor_46,2025-06-24,1,Tender Splitting
+MPLAD-F98079,Nagpur,Road Repair,979707.55,Contractor_46,2025-06-24,1,Tender Splitting
+MPLAD-87FA02,Nagpur,Road Repair,962443.31,Contractor_46,2025-06-24,1,Tender Splitting
