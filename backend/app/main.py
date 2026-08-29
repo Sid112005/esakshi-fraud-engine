@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 from datetime import datetime
 from backend.app.services.cost_detector import cost_detector_service
+from backend.app.services.budget_verifier import budget_verifier_service
 
 app = FastAPI(
     title="e-SAKSHI Forensic Intelligence Engine API",
@@ -21,6 +22,7 @@ app.add_middleware(
 
 class ProjectSanctionRequest(BaseModel):
     project_id: str = Field(..., example="MPLAD-2026-1045")
+    mp_name: str = Field(..., example="AASHTIKAR PATIL NAGESH BAPURAO")
     district: str = Field(..., example="Thane")
     work_category: str = Field(..., example="Solar Street Light")
     project_description: str = Field(..., example="Installation of 20 high-mast solar lights in Sector 4")
@@ -61,7 +63,7 @@ def analyze_project_fraud(project: ProjectSanctionRequest):
     )
 
     if ml_result["is_anomaly"] or ml_result["cost_ratio"] >= 2.0:
-        risk_score += 55
+        risk_score += 45
         alerts.append(FraudAlert(
             alert_type="ML_ISOLATION_FOREST_OUTLIER",
             severity="CRITICAL" if ml_result["cost_ratio"] >= 3.0 else "HIGH",
@@ -75,6 +77,34 @@ def analyze_project_fraud(project: ProjectSanctionRequest):
             alert_type="TENDER_SPLITTING_HEURISTIC",
             severity="HIGH",
             description="Sanction amount is strategically situated between ₹9 Lakh and ₹10 Lakh to evade standard statutory audit thresholds."
+        ))
+
+    # 3. MoSPI Allocation & Budget Compliance Check
+    budget_result = budget_verifier_service.verify_mp_budget(
+        mp_name=project.mp_name,
+        requested_amount=project.sanctioned_amount_inr
+    )
+
+    if not budget_result["verified"]:
+        risk_score += 20
+        alerts.append(FraudAlert(
+            alert_type="UNVERIFIED_MP_RECORD",
+            severity="MEDIUM",
+            description=budget_result["reason"]
+        ))
+    elif budget_result["allocation_exceeded"]:
+        risk_score += 50
+        alerts.append(FraudAlert(
+            alert_type="BUDGET_OVERRUN_VIOLATION",
+            severity="CRITICAL",
+            description=f"Sanction amount exceeds the total MoSPI allocated ceiling (₹{budget_result['total_allocated']:,.2f}) for constituency {budget_result['constituency']}."
+        ))
+    elif budget_result["excessive_single_draw"]:
+        risk_score += 15
+        alerts.append(FraudAlert(
+            alert_type="HIGH_CAPITAL_CONCENTRATION",
+            severity="LOW",
+            description=f"Single work consumes {budget_result['draw_percentage']}% of the MP's total multi-year fund."
         ))
 
     risk_score = min(risk_score, 100)
