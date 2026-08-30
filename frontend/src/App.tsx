@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Header } from "./components/Header";
 import { DashboardHome } from "./components/DashboardHome";
 import { SimulationForm } from "./components/SimulationForm";
+import { MilestoneVerification } from "./components/MilestoneVerification";
 import { HistoryPanel } from "./components/HistoryPanel";
 import { RiskResultCard } from "./components/RiskResultCard";
 import type {
@@ -13,7 +14,7 @@ import { DEFAULT_API_BASE_URL } from "./config";
 import { ArrowLeft } from "lucide-react";
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"simulation" | "dashboard" | "history">("simulation");
+  const [activeTab, setActiveTab] = useState<"simulation" | "milestone" | "dashboard" | "history">("simulation");
   const [apiBaseUrl] = useState<string>(DEFAULT_API_BASE_URL);
   const [serverStatus, setServerStatus] = useState<"checking" | "online" | "offline">("checking");
   const [history, setHistory] = useState<AuditHistoryItem[]>([]);
@@ -76,6 +77,10 @@ export const App: React.FC = () => {
             apiBaseUrl={apiBaseUrl}
             onAuditComplete={handleAuditComplete}
           />
+        )}
+
+        {activeTab === "milestone" && (
+          <MilestoneVerification />
         )}
 
         {activeTab === "dashboard" && (

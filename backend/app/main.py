@@ -18,6 +18,8 @@ app = FastAPI(
     version="1.0.0"
 )
 
+from backend.app.routers.milestone_verification import milestone_router
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -25,6 +27,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(milestone_router)
 
 class ProjectSanctionRequest(BaseModel):
     project_id: str = Field(..., example="MPLAD-2026-1045")
