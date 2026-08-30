@@ -1,10 +1,10 @@
 import React from "react";
-import { ShieldCheck, Activity, Radio, Database } from "lucide-react";
+import { ShieldCheck, Activity, Radio, Database, Camera } from "lucide-react";
 
 interface HeaderProps {
   serverStatus: "checking" | "online" | "offline";
-  activeTab: "simulation" | "dashboard" | "history";
-  onTabChange: (tab: "simulation" | "dashboard" | "history") => void;
+  activeTab: "simulation" | "milestone" | "dashboard" | "history";
+  onTabChange: (tab: "simulation" | "milestone" | "dashboard" | "history") => void;
   historyCount: number;
 }
 
@@ -73,22 +73,23 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Navigation Tabs */}
+        {/* Navigation Tabs (Pipeline Sequence: Sanction -> Milestone -> Analytics -> Log) */}
         <nav style={{
           display: "flex",
           gap: "0.35rem",
           backgroundColor: "#0b1120",
           padding: "4px",
           borderRadius: "8px",
-          border: "1px solid #1e293b"
+          border: "1px solid #1e293b",
+          flexWrap: "wrap"
         }}>
           <button
             onClick={() => onTabChange("simulation")}
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.5rem",
-              padding: "0.45rem 1rem",
+              gap: "0.45rem",
+              padding: "0.45rem 0.9rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
@@ -104,12 +105,33 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
 
           <button
+            onClick={() => onTabChange("milestone")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.45rem",
+              padding: "0.45rem 0.9rem",
+              borderRadius: "6px",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "0.825rem",
+              fontWeight: 600,
+              transition: "all 0.15s ease",
+              backgroundColor: activeTab === "milestone" ? "#0284c7" : "transparent",
+              color: activeTab === "milestone" ? "#ffffff" : "#94a3b8"
+            }}
+          >
+            <Camera size={15} />
+            Milestone Verification
+          </button>
+
+          <button
             onClick={() => onTabChange("dashboard")}
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.5rem",
-              padding: "0.45rem 1rem",
+              gap: "0.45rem",
+              padding: "0.45rem 0.9rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
@@ -129,8 +151,8 @@ export const Header: React.FC<HeaderProps> = ({
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.5rem",
-              padding: "0.45rem 1rem",
+              gap: "0.45rem",
+              padding: "0.45rem 0.9rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
