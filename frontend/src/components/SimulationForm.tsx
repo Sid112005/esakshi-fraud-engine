@@ -17,7 +17,8 @@ import {
   Calendar,
   MapPin,
   Search,
-  CheckCircle2
+  CheckCircle2,
+  Building2
 } from "lucide-react";
 
 interface MPRecord {
@@ -56,34 +57,53 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
   const [isMpDropdownOpen, setIsMpDropdownOpen] = useState(false);
   const mpDropdownRef = useRef<HTMLDivElement>(null);
 
+  const [agencyList, setAgencyList] = useState<string[]>([]);
+  const [agencySearchQuery, setAgencySearchQuery] = useState<string>("Apex Infra Pvt Ltd");
+  const [isAgencyDropdownOpen, setIsAgencyDropdownOpen] = useState(false);
+  const agencyDropdownRef = useRef<HTMLDivElement>(null);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentResult, setCurrentResult] = useState<RiskAssessmentResponse | null>(null);
   const [activeScenarioId, setActiveScenarioId] = useState<string | null>(null);
 
-  // Fetch official MoSPI verified MP list on component mount
+  // Fetch official MP list and Agency list on component mount
   useEffect(() => {
-    const fetchMps = async () => {
+    const fetchData = async () => {
       try {
-        const res = await fetch(`${apiBaseUrl}/api/v1/mp-list`);
-        if (res.ok) {
-          const data = await res.json();
+        const [mpRes, agencyRes] = await Promise.all([
+          fetch(`${apiBaseUrl}/api/v1/mp-list`),
+          fetch(`${apiBaseUrl}/api/v1/agency-list`)
+        ]);
+
+        if (mpRes.ok) {
+          const data = await mpRes.json();
           if (data.mps && Array.isArray(data.mps)) {
             setMpList(data.mps);
           }
         }
+
+        if (agencyRes.ok) {
+          const data = await agencyRes.json();
+          if (data.agencies && Array.isArray(data.agencies)) {
+            setAgencyList(data.agencies);
+          }
+        }
       } catch (err) {
-        console.error("Failed to load MP list:", err);
+        console.error("Failed to load reference data:", err);
       }
     };
-    fetchMps();
+    fetchData();
   }, [apiBaseUrl]);
 
-  // Close MP dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mpDropdownRef.current && !mpDropdownRef.current.contains(event.target as Node)) {
         setIsMpDropdownOpen(false);
+      }
+      if (agencyDropdownRef.current && !agencyDropdownRef.current.contains(event.target as Node)) {
+        setIsAgencyDropdownOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -130,9 +150,20 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     setActiveScenarioId(null);
   };
 
+  const handleSelectAgency = (agency: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      implementing_agency: agency,
+    }));
+    setAgencySearchQuery(agency);
+    setIsAgencyDropdownOpen(false);
+    setActiveScenarioId(null);
+  };
+
   const loadScenario = (scenario: DemoScenario) => {
     setFormData({ ...scenario.payload });
     setMpSearchQuery(scenario.payload.mp_name);
+    setAgencySearchQuery(scenario.payload.implementing_agency);
     setActiveScenarioId(scenario.id);
     setError(null);
   };
@@ -182,7 +213,13 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
       mp.constituency.toLowerCase().includes(query) ||
       mp.state.toLowerCase().includes(query)
     );
-  }).slice(0, 8); // Top 8 suggestions
+  }).slice(0, 8);
+
+  const filteredAgencies = agencyList.filter((agency) => {
+    const query = agencySearchQuery.toLowerCase().trim();
+    if (!query) return true;
+    return agency.toLowerCase().includes(query);
+  }).slice(0, 8);
 
   const currentDistricts = formData.state && STATE_DISTRICTS[formData.state]
     ? STATE_DISTRICTS[formData.state]
@@ -379,7 +416,7 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
                 }}
               />
 
-              {/* Suggestions Dropdown */}
+              {/* MP Suggestions Dropdown */}
               {isMpDropdownOpen && (
                 <div style={{
                   position: "absolute",
@@ -513,7 +550,7 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             </div>
           </div>
 
-          {/* Row 4: Amount & Implementing Agency */}
+          {/* Row 4: Amount & Searchable Implementing Agency Combobox */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
             <div>
               <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
@@ -540,27 +577,86 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
               />
             </div>
 
-            <div>
-              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
-                Implementing Agency / Contractor
+            <div ref={agencyDropdownRef} style={{ position: "relative" }}>
+              <label style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "0.75rem", fontWeight: 600, color: "#38bdf8", marginBottom: "4px" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+                  <Building2 size={12} />
+                  Agency / Contractor
+                </span>
+                <span style={{ fontSize: "0.68rem", color: "#64748b" }}>{agencyList.length} Known Agencies</span>
               </label>
+
               <input
                 type="text"
-                name="implementing_agency"
-                value={formData.implementing_agency}
-                onChange={handleInputChange}
+                value={agencySearchQuery}
+                onFocus={() => setIsAgencyDropdownOpen(true)}
+                onChange={(e) => {
+                  setAgencySearchQuery(e.target.value);
+                  setFormData((prev) => ({ ...prev, implementing_agency: e.target.value }));
+                  setIsAgencyDropdownOpen(true);
+                  setActiveScenarioId(null);
+                }}
                 required
-                placeholder="e.g. Apex Infra Pvt Ltd or Contractor_11"
+                placeholder="Type or select Contractor/Agency..."
                 style={{
                   width: "100%",
                   backgroundColor: "#131d33",
-                  border: "1px solid #1e293b",
+                  border: "1px solid #38bdf8",
                   borderRadius: "6px",
                   padding: "0.55rem 0.75rem",
                   color: "#f8fafc",
-                  outline: "none"
+                  outline: "none",
+                  fontWeight: 600
                 }}
               />
+
+              {/* Agency Suggestions Dropdown */}
+              {isAgencyDropdownOpen && (
+                <div style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: 0,
+                  right: 0,
+                  backgroundColor: "#0f172a",
+                  border: "1px solid #38bdf8",
+                  borderRadius: "6px",
+                  marginTop: "4px",
+                  maxHeight: "200px",
+                  overflowY: "auto",
+                  zIndex: 60,
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.6)"
+                }}>
+                  {filteredAgencies.length > 0 ? (
+                    filteredAgencies.map((agency, i) => (
+                      <div
+                        key={i}
+                        onClick={() => handleSelectAgency(agency)}
+                        style={{
+                          padding: "0.5rem 0.75rem",
+                          borderBottom: "1px solid #1e293b",
+                          cursor: "pointer",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          fontSize: "0.775rem",
+                          transition: "background-color 0.12s ease"
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1e293b")}
+                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+                      >
+                        <span style={{ fontWeight: 600, color: "#f8fafc" }}>
+                          {agency}
+                        </span>
+                        <CheckCircle2 size={13} color="#38bdf8" />
+                      </div>
+                    ))
+                  ) : (
+                    <div style={{ padding: "0.75rem", fontSize: "0.75rem", color: "#94a3b8", textAlign: "center" }}>
+                      Custom Agency: "{agencySearchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 

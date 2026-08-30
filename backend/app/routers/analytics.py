@@ -53,6 +53,34 @@ def get_mp_list():
         "mps": mps
     }
 
+@analytics_router.get("/agency-list")
+def get_agency_list():
+    """
+    Returns distinct set of implementing agencies and contractors from the dataset
+    plus standard public agencies for searchable combobox suggestions.
+    """
+    agencies_set = {
+        "Public Works Department",
+        "Standard Village Panchayat",
+        "Apex Infra Pvt Ltd",
+        "Rural Development Department",
+        "Mega Infra Consortium",
+        "Zilla Parishad Works Dept",
+        "State Water Supply Board",
+        "Municipal Corporation Division"
+    }
+
+    df = load_data()
+    if not df.empty and "implementing_agency" in df.columns:
+        dataset_agencies = df["implementing_agency"].dropna().unique().tolist()
+        agencies_set.update(dataset_agencies)
+
+    sorted_agencies = sorted(list(agencies_set))
+
+    return {
+        "total_agencies": len(sorted_agencies),
+        "agencies": sorted_agencies
+    }
 
 @analytics_router.get("/scheme-trends")
 def get_scheme_trends(
