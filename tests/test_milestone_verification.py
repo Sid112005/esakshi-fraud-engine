@@ -1,5 +1,7 @@
 import io
 import os
+import sys
+sys.path.insert(0, '.')
 from PIL import Image
 from fastapi.testclient import TestClient
 from backend.app.main import app

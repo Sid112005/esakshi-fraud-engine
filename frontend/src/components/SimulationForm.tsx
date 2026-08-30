@@ -3,7 +3,7 @@ import type {
   ProjectSanctionRequest,
   RiskAssessmentResponse,
 } from "../types";
-import { WORK_CATEGORIES, KNOWN_DISTRICTS } from "../config";
+import { WORK_CATEGORIES, STATE_DISTRICTS, STATES } from "../config";
 import { DEMO_SCENARIOS } from "../data/mockScenarios";
 import type { DemoScenario } from "../data/mockScenarios";
 import { RiskResultCard } from "./RiskResultCard";
@@ -13,7 +13,9 @@ import {
   RefreshCw,
   SlidersHorizontal,
   Layers,
-  AlertCircle
+  AlertCircle,
+  Calendar,
+  MapPin
 } from "lucide-react";
 
 interface SimulationFormProps {
@@ -28,18 +30,32 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
   const [formData, setFormData] = useState<ProjectSanctionRequest>({
     project_id: "MPLAD-2026-1045",
     mp_name: "AASHTIKAR PATIL NAGESH BAPURAO",
+    state: "Maharashtra",
     district: "Thane",
     work_category: "Solar Street Light",
     project_description: "Installation of 20 high-mast solar lights in Sector 4",
     sanctioned_amount_inr: 3750000.0,
     implementing_agency: "Apex Infra Pvt Ltd",
     sanction_date: new Date().toISOString().slice(0, 10),
+    expected_completion_date: "",
+    actual_completion_date: "",
   });
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentResult, setCurrentResult] = useState<RiskAssessmentResponse | null>(null);
   const [activeScenarioId, setActiveScenarioId] = useState<string | null>(null);
+
+  const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newState = e.target.value;
+    const availableDistricts = STATE_DISTRICTS[newState] || ["General"];
+    setFormData((prev) => ({
+      ...prev,
+      state: newState,
+      district: availableDistricts[0],
+    }));
+    setActiveScenarioId(null);
+  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -64,12 +80,19 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     setError(null);
 
     try {
+      // Clean up empty optional date strings to None/null for backend
+      const payload = {
+        ...formData,
+        expected_completion_date: formData.expected_completion_date?.trim() || null,
+        actual_completion_date: formData.actual_completion_date?.trim() || null,
+      };
+
       const response = await fetch(`${apiBaseUrl}/api/v1/detect-fraud`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -88,6 +111,10 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
       setLoading(false);
     }
   };
+
+  const currentDistricts = formData.state && STATE_DISTRICTS[formData.state]
+    ? STATE_DISTRICTS[formData.state]
+    : STATE_DISTRICTS["Maharashtra"];
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -114,13 +141,13 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             </span>
           </div>
           <span style={{ fontSize: "0.75rem", color: "#64748b" }}>
-            Instant preloads matching verified backend test vectors
+            National test vectors across Maharashtra, J&K, Bihar, etc.
           </span>
         </div>
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           gap: "0.75rem"
         }}>
           {DEMO_SCENARIOS.map((sc) => {
@@ -197,7 +224,7 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             <span style={{ fontSize: "0.725rem", color: "#64748b" }}>POST /api/v1/detect-fraud</span>
           </div>
 
-          {/* Row 1: Project ID & Date */}
+          {/* Row 1: Project ID & Sanction Date */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
             <div>
               <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
@@ -245,7 +272,61 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             </div>
           </div>
 
-          {/* Row 2: MP Name & District */}
+          {/* Row 2: Cascading State & District Dropdowns (Task 6) */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+            <div>
+              <label style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.75rem", fontWeight: 600, color: "#38bdf8", marginBottom: "4px" }}>
+                <MapPin size={13} />
+                State (National Pool)
+              </label>
+              <select
+                name="state"
+                value={formData.state || "Maharashtra"}
+                onChange={handleStateChange}
+                required
+                style={{
+                  width: "100%",
+                  backgroundColor: "#131d33",
+                  border: "1px solid #38bdf8",
+                  borderRadius: "6px",
+                  padding: "0.55rem 0.75rem",
+                  color: "#f8fafc",
+                  outline: "none"
+                }}
+              >
+                {STATES.map((st) => (
+                  <option key={st} value={st}>{st}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
+                District (Cascading)
+              </label>
+              <select
+                name="district"
+                value={formData.district}
+                onChange={handleInputChange}
+                required
+                style={{
+                  width: "100%",
+                  backgroundColor: "#131d33",
+                  border: "1px solid #1e293b",
+                  borderRadius: "6px",
+                  padding: "0.55rem 0.75rem",
+                  color: "#f8fafc",
+                  outline: "none"
+                }}
+              >
+                {currentDistricts.map((d) => (
+                  <option key={d} value={d}>{d}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Row 3: MP Name & Work Category */}
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "1rem" }}>
             <div>
               <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
@@ -272,34 +353,6 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
 
             <div>
               <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
-                District
-              </label>
-              <select
-                name="district"
-                value={formData.district}
-                onChange={handleInputChange}
-                required
-                style={{
-                  width: "100%",
-                  backgroundColor: "#131d33",
-                  border: "1px solid #1e293b",
-                  borderRadius: "6px",
-                  padding: "0.55rem 0.75rem",
-                  color: "#f8fafc",
-                  outline: "none"
-                }}
-              >
-                {KNOWN_DISTRICTS.map((d) => (
-                  <option key={d} value={d}>{d}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Row 3: Work Category & Amount */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-            <div>
-              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
                 Work Category
               </label>
               <select
@@ -322,7 +375,10 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
                 ))}
               </select>
             </div>
+          </div>
 
+          {/* Row 4: Amount & Implementing Agency */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
             <div>
               <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
                 Sanction Amount (₹ INR)
@@ -347,33 +403,94 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
                 }}
               />
             </div>
+
+            <div>
+              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
+                Implementing Agency / Contractor
+              </label>
+              <input
+                type="text"
+                name="implementing_agency"
+                value={formData.implementing_agency}
+                onChange={handleInputChange}
+                required
+                placeholder="e.g. Apex Infra Pvt Ltd or Contractor_37"
+                style={{
+                  width: "100%",
+                  backgroundColor: "#131d33",
+                  border: "1px solid #1e293b",
+                  borderRadius: "6px",
+                  padding: "0.55rem 0.75rem",
+                  color: "#f8fafc",
+                  outline: "none"
+                }}
+              />
+            </div>
           </div>
 
-          {/* Row 4: Implementing Agency */}
-          <div>
-            <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
-              Implementing Agency / Contractor
-            </label>
-            <input
-              type="text"
-              name="implementing_agency"
-              value={formData.implementing_agency}
-              onChange={handleInputChange}
-              required
-              placeholder="e.g. Apex Infra Pvt Ltd or Contractor_37"
-              style={{
-                width: "100%",
-                backgroundColor: "#131d33",
-                border: "1px solid #1e293b",
-                borderRadius: "6px",
-                padding: "0.55rem 0.75rem",
-                color: "#f8fafc",
-                outline: "none"
-              }}
-            />
+          {/* Row 5: Optional Timeline & Delay Audit Dates (Task 2) */}
+          <div style={{
+            backgroundColor: "rgba(11, 17, 32, 0.6)",
+            border: "1px solid #1e293b",
+            borderRadius: "8px",
+            padding: "0.85rem",
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.6rem"
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", fontWeight: 700, color: "#fbbf24" }}>
+              <Calendar size={14} />
+              Project Execution Timeline & Delay Audit (Optional)
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.85rem" }}>
+              <div>
+                <label style={{ display: "block", fontSize: "0.7rem", color: "#94a3b8", marginBottom: "3px" }}>
+                  Expected Completion Date
+                </label>
+                <input
+                  type="date"
+                  name="expected_completion_date"
+                  value={formData.expected_completion_date || ""}
+                  onChange={handleInputChange}
+                  style={{
+                    width: "100%",
+                    backgroundColor: "#131d33",
+                    border: "1px solid #1e293b",
+                    borderRadius: "6px",
+                    padding: "0.45rem 0.65rem",
+                    color: "#f8fafc",
+                    outline: "none",
+                    fontSize: "0.8rem"
+                  }}
+                />
+              </div>
+
+              <div>
+                <label style={{ display: "block", fontSize: "0.7rem", color: "#94a3b8", marginBottom: "3px" }}>
+                  Actual Completion Date (or leave blank if ongoing)
+                </label>
+                <input
+                  type="date"
+                  name="actual_completion_date"
+                  value={formData.actual_completion_date || ""}
+                  onChange={handleInputChange}
+                  style={{
+                    width: "100%",
+                    backgroundColor: "#131d33",
+                    border: "1px solid #1e293b",
+                    borderRadius: "6px",
+                    padding: "0.45rem 0.65rem",
+                    color: "#f8fafc",
+                    outline: "none",
+                    fontSize: "0.8rem"
+                  }}
+                />
+              </div>
+            </div>
           </div>
 
-          {/* Row 5: Project Description */}
+          {/* Row 6: Project Description */}
           <div>
             <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
               Detailed Project Description (Sentence-BERT Semantic Matching)
@@ -425,7 +542,7 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
               {loading ? (
                 <>
                   <RefreshCw size={16} className="animate-spin" />
-                  Running 5 AI Forensic Modules...
+                  Running 6 AI Forensic Modules...
                 </>
               ) : (
                 <>

@@ -8,6 +8,8 @@ from backend.app.services.budget_verifier import budget_verifier_service
 from backend.app.services.collusion_detector import collusion_detector_service
 from backend.app.services.graph_service import cartel_graph_service
 from ml_engine.split_tender_detector import SplitTenderDetector
+from backend.app.routers.milestone_verification import milestone_router
+from backend.app.routers.analytics import analytics_router
 
 # Instantiate the co-lead's SBERT split tender service object
 split_tender_service = SplitTenderDetector()
@@ -18,8 +20,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-from backend.app.routers.milestone_verification import milestone_router
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -29,16 +29,20 @@ app.add_middleware(
 )
 
 app.include_router(milestone_router)
+app.include_router(analytics_router)
 
 class ProjectSanctionRequest(BaseModel):
     project_id: str = Field(..., example="MPLAD-2026-1045")
     mp_name: str = Field(..., example="AASHTIKAR PATIL NAGESH BAPURAO")
+    state: Optional[str] = Field(None, example="Maharashtra")
     district: str = Field(..., example="Thane")
     work_category: str = Field(..., example="Solar Street Light")
     project_description: str = Field(..., example="Installation of 20 high-mast solar lights in Sector 4")
     sanctioned_amount_inr: float = Field(..., example=3750000.0)
     implementing_agency: str = Field(..., example="Apex Infra Pvt Ltd")
     sanction_date: str = Field(..., example="2026-08-25")
+    expected_completion_date: Optional[str] = Field(None, example="2026-11-25")
+    actual_completion_date: Optional[str] = Field(None, example="2027-02-15")
 
 class FraudAlert(BaseModel):
     alert_type: str
@@ -155,6 +159,49 @@ def analyze_project_fraud(project: ProjectSanctionRequest):
             severity="CRITICAL",
             description="Entity shares confidential attributes with blacklisted shell syndicates."
         ))
+
+    # 6. Project Timeline & Milestone Delay Check (Task 2)
+    if project.expected_completion_date:
+        try:
+            exp_dt = datetime.strptime(project.expected_completion_date.strip(), "%Y-%m-%d")
+            if project.actual_completion_date:
+                act_dt = datetime.strptime(project.actual_completion_date.strip(), "%Y-%m-%d")
+                if act_dt > exp_dt:
+                    delay_days = (act_dt - exp_dt).days
+                    if delay_days > 90:
+                        risk_score += 25
+                        alerts.append(FraudAlert(
+                            alert_type="DELAYED_PROJECT",
+                            severity="HIGH",
+                            description=f"Project completed {delay_days} days past the scheduled deadline ({project.expected_completion_date}), indicating chronic execution lag."
+                        ))
+                    elif delay_days > 30:
+                        risk_score += 15
+                        alerts.append(FraudAlert(
+                            alert_type="DELAYED_PROJECT",
+                            severity="MEDIUM",
+                            description=f"Project completed {delay_days} days past the scheduled deadline ({project.expected_completion_date})."
+                        ))
+            else:
+                now_dt = datetime.now()
+                if exp_dt < now_dt:
+                    overdue_days = (now_dt - exp_dt).days
+                    if overdue_days > 60:
+                        risk_score += 25
+                        alerts.append(FraudAlert(
+                            alert_type="DELAYED_PROJECT",
+                            severity="HIGH",
+                            description=f"Project is currently {overdue_days} days overdue past the target completion date ({project.expected_completion_date}) with no completion record."
+                        ))
+                    elif overdue_days > 15:
+                        risk_score += 15
+                        alerts.append(FraudAlert(
+                            alert_type="DELAYED_PROJECT",
+                            severity="MEDIUM",
+                            description=f"Project is {overdue_days} days overdue past target completion date ({project.expected_completion_date})."
+                        ))
+        except Exception:
+            pass
 
     risk_score = min(risk_score, 100)
     if risk_score >= 75:

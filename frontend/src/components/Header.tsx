@@ -1,11 +1,18 @@
 import React from "react";
-import { ShieldCheck, Activity, Radio, Database, Camera } from "lucide-react";
+import { ShieldCheck, Activity, Radio, Database, Camera, UserCheck } from "lucide-react";
+import { STATE_DISTRICTS, STATES, type UserRole } from "../config";
 
 interface HeaderProps {
   serverStatus: "checking" | "online" | "offline";
   activeTab: "simulation" | "milestone" | "dashboard" | "history";
   onTabChange: (tab: "simulation" | "milestone" | "dashboard" | "history") => void;
   historyCount: number;
+  userRole: UserRole;
+  onRoleChange: (role: UserRole) => void;
+  selectedState: string;
+  onStateChange: (state: string) => void;
+  selectedDistrict: string;
+  onDistrictChange: (district: string) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -13,16 +20,26 @@ export const Header: React.FC<HeaderProps> = ({
   activeTab,
   onTabChange,
   historyCount,
+  userRole,
+  onRoleChange,
+  selectedState,
+  onStateChange,
+  selectedDistrict,
+  onDistrictChange,
 }) => {
+  const currentDistricts = selectedState && STATE_DISTRICTS[selectedState]
+    ? STATE_DISTRICTS[selectedState]
+    : STATE_DISTRICTS["Maharashtra"];
+
   return (
     <header style={{
       borderBottom: "1px solid #1e293b",
-      backgroundColor: "rgba(15, 23, 42, 0.85)",
+      backgroundColor: "rgba(15, 23, 42, 0.9)",
       backdropFilter: "blur(12px)",
       position: "sticky",
       top: 0,
       zIndex: 50,
-      padding: "0.75rem 1.5rem"
+      padding: "0.65rem 1.5rem"
     }}>
       <div style={{
         maxWidth: "1400px",
@@ -36,8 +53,8 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Logo & Government Identity */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
           <div style={{
-            width: "42px",
-            height: "42px",
+            width: "40px",
+            height: "40px",
             borderRadius: "10px",
             background: "linear-gradient(135deg, #0ea5e9, #0284c7)",
             display: "flex",
@@ -46,11 +63,11 @@ export const Header: React.FC<HeaderProps> = ({
             boxShadow: "0 0 15px rgba(14, 165, 233, 0.4)",
             border: "1px solid rgba(255, 255, 255, 0.2)"
           }}>
-            <ShieldCheck size={26} color="#ffffff" />
+            <ShieldCheck size={24} color="#ffffff" />
           </div>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <span style={{ fontSize: "1.15rem", fontWeight: 800, letterSpacing: "-0.02em", color: "#f8fafc" }}>
+              <span style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em", color: "#f8fafc" }}>
                 e-SAKSHI
               </span>
               <span style={{
@@ -67,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
                 SIH26102
               </span>
             </div>
-            <div style={{ fontSize: "0.75rem", color: "#94a3b8", fontWeight: 500 }}>
+            <div style={{ fontSize: "0.725rem", color: "#94a3b8", fontWeight: 500 }}>
               Forensic Intelligence & Fraud Detection Engine • MoSPI / MPLADS
             </div>
           </div>
@@ -76,9 +93,9 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Navigation Tabs (Pipeline Sequence: Sanction -> Milestone -> Analytics -> Log) */}
         <nav style={{
           display: "flex",
-          gap: "0.35rem",
+          gap: "0.3rem",
           backgroundColor: "#0b1120",
-          padding: "4px",
+          padding: "3px",
           borderRadius: "8px",
           border: "1px solid #1e293b",
           flexWrap: "wrap"
@@ -88,19 +105,19 @@ export const Header: React.FC<HeaderProps> = ({
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.45rem",
-              padding: "0.45rem 0.9rem",
+              gap: "0.4rem",
+              padding: "0.4rem 0.85rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
-              fontSize: "0.825rem",
+              fontSize: "0.8rem",
               fontWeight: 600,
               transition: "all 0.15s ease",
               backgroundColor: activeTab === "simulation" ? "#0284c7" : "transparent",
               color: activeTab === "simulation" ? "#ffffff" : "#94a3b8"
             }}
           >
-            <Activity size={15} />
+            <Activity size={14} />
             Live Forensic Audit
           </button>
 
@@ -109,19 +126,19 @@ export const Header: React.FC<HeaderProps> = ({
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.45rem",
-              padding: "0.45rem 0.9rem",
+              gap: "0.4rem",
+              padding: "0.4rem 0.85rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
-              fontSize: "0.825rem",
+              fontSize: "0.8rem",
               fontWeight: 600,
               transition: "all 0.15s ease",
               backgroundColor: activeTab === "milestone" ? "#0284c7" : "transparent",
               color: activeTab === "milestone" ? "#ffffff" : "#94a3b8"
             }}
           >
-            <Camera size={15} />
+            <Camera size={14} />
             Milestone Verification
           </button>
 
@@ -130,19 +147,19 @@ export const Header: React.FC<HeaderProps> = ({
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.45rem",
-              padding: "0.45rem 0.9rem",
+              gap: "0.4rem",
+              padding: "0.4rem 0.85rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
-              fontSize: "0.825rem",
+              fontSize: "0.8rem",
               fontWeight: 600,
               transition: "all 0.15s ease",
               backgroundColor: activeTab === "dashboard" ? "#0284c7" : "transparent",
               color: activeTab === "dashboard" ? "#ffffff" : "#94a3b8"
             }}
           >
-            <Database size={15} />
+            <Database size={14} />
             Scheme Analytics
           </button>
 
@@ -151,12 +168,12 @@ export const Header: React.FC<HeaderProps> = ({
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.45rem",
-              padding: "0.45rem 0.9rem",
+              gap: "0.4rem",
+              padding: "0.4rem 0.85rem",
               borderRadius: "6px",
               border: "none",
               cursor: "pointer",
-              fontSize: "0.825rem",
+              fontSize: "0.8rem",
               fontWeight: 600,
               transition: "all 0.15s ease",
               backgroundColor: activeTab === "history" ? "#0284c7" : "transparent",
@@ -167,15 +184,102 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </nav>
 
+        {/* Role & Level Switcher (Task 5) */}
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          backgroundColor: "#131d33",
+          border: "1px solid #1e293b",
+          borderRadius: "8px",
+          padding: "4px 8px",
+          flexWrap: "wrap"
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.75rem", color: "#38bdf8", fontWeight: 700 }}>
+            <UserCheck size={14} />
+            <span>Role:</span>
+          </div>
+
+          <select
+            value={userRole}
+            onChange={(e) => onRoleChange(e.target.value as UserRole)}
+            style={{
+              backgroundColor: "#0b1120",
+              border: "1px solid #334155",
+              borderRadius: "4px",
+              padding: "2px 6px",
+              fontSize: "0.75rem",
+              color: "#f8fafc",
+              fontWeight: 600,
+              outline: "none"
+            }}
+          >
+            <option value="MINISTRY">Ministry (National HQ)</option>
+            <option value="STATE_NODAL">State Nodal Authority</option>
+            <option value="DISTRICT_AUTHORITY">District Authority</option>
+            <option value="MP_OFFICE">MP Constituency Office</option>
+          </select>
+
+          {/* State selector if State Nodal or District */}
+          {(userRole === "STATE_NODAL" || userRole === "DISTRICT_AUTHORITY") && (
+            <select
+              value={selectedState}
+              onChange={(e) => {
+                const st = e.target.value;
+                onStateChange(st);
+                const d = STATE_DISTRICTS[st]?.[0] || "All";
+                onDistrictChange(d);
+              }}
+              style={{
+                backgroundColor: "#0b1120",
+                border: "1px solid #38bdf8",
+                borderRadius: "4px",
+                padding: "2px 6px",
+                fontSize: "0.75rem",
+                color: "#38bdf8",
+                fontWeight: 600,
+                outline: "none"
+              }}
+            >
+              {STATES.map((st) => (
+                <option key={st} value={st}>{st}</option>
+              ))}
+            </select>
+          )}
+
+          {/* District selector if District Authority */}
+          {userRole === "DISTRICT_AUTHORITY" && (
+            <select
+              value={selectedDistrict}
+              onChange={(e) => onDistrictChange(e.target.value)}
+              style={{
+                backgroundColor: "#0b1120",
+                border: "1px solid #38bdf8",
+                borderRadius: "4px",
+                padding: "2px 6px",
+                fontSize: "0.75rem",
+                color: "#38bdf8",
+                fontWeight: 600,
+                outline: "none"
+              }}
+            >
+              <option value="All">All Districts</option>
+              {currentDistricts.map((d) => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
+          )}
+        </div>
+
         {/* Live Server Indicator */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           <div style={{
             display: "flex",
             alignItems: "center",
             gap: "0.4rem",
-            fontSize: "0.75rem",
+            fontSize: "0.725rem",
             fontWeight: 600,
-            padding: "4px 10px",
+            padding: "3px 8px",
             borderRadius: "20px",
             backgroundColor:
               serverStatus === "online"
@@ -197,9 +301,9 @@ export const Header: React.FC<HeaderProps> = ({
                 : "rgba(239, 68, 68, 0.3)"
             }`
           }}>
-            <Radio size={13} />
-            {serverStatus === "online" && "FastAPI Engine: Active (8000)"}
-            {serverStatus === "checking" && "Connecting to Engine..."}
+            <Radio size={12} />
+            {serverStatus === "online" && "Engine: Online (8000)"}
+            {serverStatus === "checking" && "Connecting..."}
             {serverStatus === "offline" && "FastAPI Offline"}
           </div>
         </div>

@@ -1,5 +1,8 @@
 import os
 import glob
+import json
+import sys
+sys.path.insert(0, '.')
 from ml_engine.image_duplicate_detector import compute_image_hash, ImageDuplicateDetector
 
 DEMO_DIR = os.path.join("data", "demo_images")

@@ -5,9 +5,25 @@ from datetime import datetime, timedelta
 import uuid
 import os
 
+# --- Random Seed for Reproducibility ---
+random.seed(42)
+np.random.seed(42)
+
 # --- Configurations ---
 NUM_RECORDS = 1000
-DISTRICTS = ["Thane", "Pune", "Nagpur", "Nashik", "Palghar"]
+
+STATE_DISTRICTS = {
+    "Maharashtra": ["Thane", "Pune", "Nagpur", "Nashik", "Palghar", "Mumbai Suburban", "Aurangabad", "Hingoli"],
+    "Bihar": ["Patna", "Gaya", "Muzaffarpur", "Aurangabad_BR"],
+    "Uttar Pradesh": ["Lucknow", "Varanasi", "Kanpur", "Agra"],
+    "West Bengal": ["Kolkata", "Tamluk", "Howrah", "Darjeeling"],
+    "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Trichy"],
+    "Karnataka": ["Bengaluru Urban", "Mysuru", "Belagavi"],
+    "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur"],
+    "Jammu And Kashmir": ["Srinagar", "Baramulla", "Jammu"],
+    "Assam": ["Guwahati", "Dibrugarh", "Silchar"]
+}
+
 CATEGORIES = {
     "Solar Street Light": {"base_cost": 75000, "variance": 10000},
     "Community Hall": {"base_cost": 1500000, "variance": 200000},
@@ -110,6 +126,7 @@ def generate_normal_description(category, district):
 def generate_normal_data(num_records):
     data = []
     start_date = datetime(2025, 1, 1)
+    states = list(STATE_DISTRICTS.keys())
     
     for _ in range(num_records):
         cat = random.choice(list(CATEGORIES.keys()))
@@ -118,17 +135,31 @@ def generate_normal_data(num_records):
         
         # Normal cost within standard variance
         cost = round(random.uniform(base - var, base + var), 2)
-        date = start_date + timedelta(days=random.randint(0, 365))
-        district = random.choice(DISTRICTS)
+        sanction_date = start_date + timedelta(days=random.randint(0, 365))
+        state = random.choice(states)
+        district = random.choice(STATE_DISTRICTS[state])
+        
+        # Project completion timelines
+        duration_days = random.randint(90, 180)
+        expected_date = sanction_date + timedelta(days=duration_days)
+        # Normal actual completion (on-time or +- 10 days)
+        if random.random() < 0.85:
+            actual_date = expected_date + timedelta(days=random.randint(-15, 10))
+            actual_str = actual_date.strftime("%Y-%m-%d")
+        else:
+            actual_str = None # Still ongoing
         
         data.append({
             "project_id": f"MPLAD-{uuid.uuid4().hex[:6].upper()}",
+            "state": state,
             "district": district,
             "work_category": cat,
             "project_description": generate_normal_description(cat, district),
             "sanctioned_amount_inr": cost,
             "implementing_agency": random.choice(CONTRACTORS),
-            "sanction_date": date.strftime("%Y-%m-%d"),
+            "sanction_date": sanction_date.strftime("%Y-%m-%d"),
+            "expected_completion_date": expected_date.strftime("%Y-%m-%d"),
+            "actual_completion_date": actual_str,
             "fraud_label": 0,
             "fraud_type": "None"
         })
@@ -150,12 +181,14 @@ def inject_cost_inflation(data, num_cases):
 def inject_tender_splitting(data, num_cases):
     # Generates identical/near-duplicate smaller tenders just below the 1,000,000 threshold within close time window
     start_base_date = datetime(2025, 1, 1)
+    states = list(STATE_DISTRICTS.keys())
+    
     for _ in range(num_cases):
         cluster_base_date = start_base_date + timedelta(days=random.randint(0, 330))
-        district = random.choice(DISTRICTS)
+        state = random.choice(states)
+        district = random.choice(STATE_DISTRICTS[state])
         contractor = random.choice(CONTRACTORS)
         
-        # Pick category and matching template cluster for near-duplicate descriptions
         category_clusters = [
             ("Road Repair", SPLIT_CLUSTER_TEMPLATES[0]),
             ("Solar Street Light", SPLIT_CLUSTER_TEMPLATES[1]),
@@ -166,40 +199,64 @@ def inject_tender_splitting(data, num_cases):
         cat, template_set = random.choice(category_clusters)
         loc = generate_location()
         
-        # Number of split fragments in this cluster
         cluster_size = random.randint(3, 5)
-        # Select near duplicate descriptions
         selected_templates = random.sample(template_set, min(cluster_size, len(template_set)))
         while len(selected_templates) < cluster_size:
             selected_templates.append(random.choice(template_set))
             
         for i in range(cluster_size):
-            # Split tenders usually sanctioned on the same day or within 1-10 days
             sanction_date = cluster_base_date + timedelta(days=random.randint(0, 7))
+            expected_date = sanction_date + timedelta(days=random.randint(60, 120))
             desc = selected_templates[i].format(location=loc)
             
             data.append({
                 "project_id": f"MPLAD-{uuid.uuid4().hex[:6].upper()}",
+                "state": state,
                 "district": district,
                 "work_category": cat,
                 "project_description": desc,
                 "sanctioned_amount_inr": round(random.uniform(920000, 995000), 2),
                 "implementing_agency": contractor,
                 "sanction_date": sanction_date.strftime("%Y-%m-%d"),
+                "expected_completion_date": expected_date.strftime("%Y-%m-%d"),
+                "actual_completion_date": (expected_date + timedelta(days=random.randint(0, 15))).strftime("%Y-%m-%d"),
                 "fraud_label": 1,
                 "fraud_type": "Tender Splitting"
             })
     return data
 
+def inject_delayed_completion(data, num_cases=35):
+    # Injects projects that are severely delayed beyond expected completion date
+    for _ in range(num_cases):
+        idx = random.randint(0, len(data) - 1)
+        if data[idx]["fraud_type"] != "None":
+            continue
+            
+        sanction_dt = datetime.strptime(data[idx]["sanction_date"], "%Y-%m-%d")
+        expected_dt = sanction_dt + timedelta(days=random.randint(90, 150))
+        data[idx]["expected_completion_date"] = expected_dt.strftime("%Y-%m-%d")
+        
+        # Delayed either by 60-180 days past deadline or uncompleted past target
+        if random.random() < 0.5:
+            actual_dt = expected_dt + timedelta(days=random.randint(60, 180))
+            data[idx]["actual_completion_date"] = actual_dt.strftime("%Y-%m-%d")
+        else:
+            data[idx]["actual_completion_date"] = None
+            
+        data[idx]["fraud_label"] = 1
+        data[idx]["fraud_type"] = "Delayed Completion"
+    return data
+
 if __name__ == "__main__":
-    print("Initializing Data Engine...")
+    print("Initializing National Synthetic Data Engine...")
     
     # 1. Generate baseline clean data
     raw_data = generate_normal_data(NUM_RECORDS)
     
     # 2. Inject Anomaly Patterns
     raw_data = inject_cost_inflation(raw_data, num_cases=50)
-    raw_data = inject_tender_splitting(raw_data, num_cases=20) # 20 clusters of split tenders
+    raw_data = inject_tender_splitting(raw_data, num_cases=20)
+    raw_data = inject_delayed_completion(raw_data, num_cases=35)
     
     # 3. Compile to DataFrame
     df = pd.DataFrame(raw_data)
@@ -209,9 +266,11 @@ if __name__ == "__main__":
     output_path = "data/synthetic/mplads_synthetic_data.csv"
     df.to_csv(output_path, index=False)
     
-    print(f"Success! {len(df)} records generated.")
+    print(f"Success! {len(df)} records generated across {len(STATE_DISTRICTS)} states.")
     print(f"Data saved to: {output_path}")
     print("\n--- Fraud Breakdown ---")
     print(df['fraud_type'].value_counts())
+    print("\n--- State Distribution ---")
+    print(df['state'].value_counts())
     print("\n--- Sample Generated Records ---")
-    print(df[['project_id', 'district', 'work_category', 'project_description', 'sanctioned_amount_inr', 'fraud_type']].head(8).to_string())
+    print(df[['project_id', 'state', 'district', 'work_category', 'sanctioned_amount_inr', 'expected_completion_date', 'actual_completion_date', 'fraud_type']].head(8).to_string())
