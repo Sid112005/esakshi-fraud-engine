@@ -7,6 +7,10 @@ from backend.app.services.cost_detector import cost_detector_service
 from backend.app.services.budget_verifier import budget_verifier_service
 from backend.app.services.collusion_detector import collusion_detector_service
 from backend.app.services.graph_service import cartel_graph_service
+from ml_engine.split_tender_detector import SplitTenderDetector
+
+# Instantiate the co-lead's SBERT split tender service object
+split_tender_service = SplitTenderDetector()
 
 app = FastAPI(
     title="e-SAKSHI Forensic Intelligence Engine API",
@@ -72,13 +76,24 @@ def analyze_project_fraud(project: ProjectSanctionRequest):
             description=f"Isolation Forest flagged cost as statistical outlier. Sanctioned amount (₹{project.sanctioned_amount_inr:,.0f}) is {ml_result['cost_ratio']}x the historical median (₹{ml_result['category_median']:,.0f})."
         ))
 
-    # 2. Split Tender Heuristic (< ₹10 Lakhs Threshold Evasion)
-    if 900000.0 <= project.sanctioned_amount_inr < 1000000.0:
+    # 2. AI-Driven Split Tender Semantic Detector (Sentence-BERT)
+    split_result = split_tender_service.analyze_split_tender(
+        project_description=project.project_description,
+        sanctioned_amount=project.sanctioned_amount_inr,
+        project_id=project.project_id,
+        district=project.district,
+        sanction_date=project.sanction_date
+    )
+
+    # Debug print to check exact SBERT output in your terminal
+    print("SBERT DEBUG RESULT:", split_result)
+
+    if split_result.get("is_split_tender", False):
         risk_score += 25
         alerts.append(FraudAlert(
-            alert_type="TENDER_SPLITTING_HEURISTIC",
+            alert_type="SEMANTIC_SPLIT_TENDER_ANOMALY",
             severity="HIGH",
-            description="Sanction amount is strategically situated between ₹9 Lakh and ₹10 Lakh to evade standard statutory audit thresholds."
+            description=split_result.get("explanation", "Sentence-BERT detected semantic fragmentation patterns indicative of intentional threshold evasion.")
         ))
 
     # 3. MoSPI Allocation & Budget Compliance Check

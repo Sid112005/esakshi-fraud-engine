@@ -1,7 +1,38 @@
 from fastapi.testclient import TestClient
 from backend.app.main import app
+from ml_engine.split_tender_detector import SplitTenderDetector
 
 client = TestClient(app)
+
+
+def test_split_tender_detector_class_exists_and_works():
+    detector = SplitTenderDetector(similarity_threshold=0.0)
+    records = [{
+        "project_id": "A-1",
+        "district": "Pune",
+        "project_description": "Repair of internal road in Sector 4",
+        "sanction_date": "2025-05-10",
+        "sanctioned_amount_inr": 980000.0,
+    }, {
+        "project_id": "A-2",
+        "district": "Pune",
+        "project_description": "Road repair work Sector 4 internal",
+        "sanction_date": "2025-05-12",
+        "sanctioned_amount_inr": 975000.0,
+    }]
+
+    result = detector.analyze_split_tender(
+        project_description="Road repair work Sector 4 internal",
+        sanctioned_amount=975000.0,
+        project_id="A-2",
+        district="Pune",
+        sanction_date="2025-05-12",
+        comparison_projects=records[:-1],
+    )
+
+    assert isinstance(result, dict)
+    assert "is_split_tender" in result
+
 
 def test_health_check():
     response = client.get("/")
