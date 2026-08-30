@@ -12,7 +12,6 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import numpy as np
 import pandas as pd
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
@@ -20,13 +19,14 @@ DEFAULT_DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "synth
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 # Singleton model holder
-_model_instance: Optional[SentenceTransformer] = None
+_model_instance: Optional[Any] = None
 
 
-def get_embedding_model() -> SentenceTransformer:
-    """Lazy load and cache SentenceTransformer model."""
+def get_embedding_model() -> Any:
+    """Lazy load and cache SentenceTransformer model on first actual request."""
     global _model_instance
     if _model_instance is None:
+        from sentence_transformers import SentenceTransformer
         _model_instance = SentenceTransformer(MODEL_NAME)
     return _model_instance
 
