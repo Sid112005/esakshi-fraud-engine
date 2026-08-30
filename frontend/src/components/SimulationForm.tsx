@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import type {
   ProjectSanctionRequest,
   RiskAssessmentResponse,
@@ -15,8 +15,18 @@ import {
   Layers,
   AlertCircle,
   Calendar,
-  MapPin
+  MapPin,
+  Search,
+  CheckCircle2
 } from "lucide-react";
+
+interface MPRecord {
+  id: string;
+  mp_name: string;
+  constituency: string;
+  state: string;
+  allocated_amount_inr: number;
+}
 
 interface SimulationFormProps {
   apiBaseUrl: string;
@@ -41,10 +51,44 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     actual_completion_date: "",
   });
 
+  const [mpList, setMpList] = useState<MPRecord[]>([]);
+  const [mpSearchQuery, setMpSearchQuery] = useState<string>("AASHTIKAR PATIL NAGESH BAPURAO");
+  const [isMpDropdownOpen, setIsMpDropdownOpen] = useState(false);
+  const mpDropdownRef = useRef<HTMLDivElement>(null);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentResult, setCurrentResult] = useState<RiskAssessmentResponse | null>(null);
   const [activeScenarioId, setActiveScenarioId] = useState<string | null>(null);
+
+  // Fetch official MoSPI verified MP list on component mount
+  useEffect(() => {
+    const fetchMps = async () => {
+      try {
+        const res = await fetch(`${apiBaseUrl}/api/v1/mp-list`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.mps && Array.isArray(data.mps)) {
+            setMpList(data.mps);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load MP list:", err);
+      }
+    };
+    fetchMps();
+  }, [apiBaseUrl]);
+
+  // Close MP dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mpDropdownRef.current && !mpDropdownRef.current.contains(event.target as Node)) {
+        setIsMpDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newState = e.target.value;
@@ -68,8 +112,27 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     setActiveScenarioId(null);
   };
 
+  const handleSelectMp = (mp: MPRecord) => {
+    setFormData((prev) => {
+      const matchState = Object.keys(STATE_DISTRICTS).find(
+        (s) => s.toLowerCase() === mp.state.toLowerCase()
+      ) || prev.state || "Maharashtra";
+      const availableDistricts = STATE_DISTRICTS[matchState] || ["General"];
+      return {
+        ...prev,
+        mp_name: mp.mp_name,
+        state: matchState,
+        district: availableDistricts[0],
+      };
+    });
+    setMpSearchQuery(mp.mp_name);
+    setIsMpDropdownOpen(false);
+    setActiveScenarioId(null);
+  };
+
   const loadScenario = (scenario: DemoScenario) => {
     setFormData({ ...scenario.payload });
+    setMpSearchQuery(scenario.payload.mp_name);
     setActiveScenarioId(scenario.id);
     setError(null);
   };
@@ -80,7 +143,6 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
     setError(null);
 
     try {
-      // Clean up empty optional date strings to None/null for backend
       const payload = {
         ...formData,
         expected_completion_date: formData.expected_completion_date?.trim() || null,
@@ -111,6 +173,16 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
       setLoading(false);
     }
   };
+
+  const filteredMps = mpList.filter((mp) => {
+    const query = mpSearchQuery.toLowerCase().trim();
+    if (!query) return true;
+    return (
+      mp.mp_name.toLowerCase().includes(query) ||
+      mp.constituency.toLowerCase().includes(query) ||
+      mp.state.toLowerCase().includes(query)
+    );
+  }).slice(0, 8); // Top 8 suggestions
 
   const currentDistricts = formData.state && STATE_DISTRICTS[formData.state]
     ? STATE_DISTRICTS[formData.state]
@@ -272,7 +344,122 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             </div>
           </div>
 
-          {/* Row 2: Cascading State & District Dropdowns (Task 6) */}
+          {/* Row 2: MP Name Searchable Combobox & Work Category */}
+          <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "1rem" }}>
+            <div ref={mpDropdownRef} style={{ position: "relative" }}>
+              <label style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "0.75rem", fontWeight: 600, color: "#38bdf8", marginBottom: "4px" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+                  <Search size={12} />
+                  Hon'ble MP Name (MoSPI Verified)
+                </span>
+                <span style={{ fontSize: "0.68rem", color: "#64748b" }}>{mpList.length} Verified MPs</span>
+              </label>
+              
+              <input
+                type="text"
+                value={mpSearchQuery}
+                onFocus={() => setIsMpDropdownOpen(true)}
+                onChange={(e) => {
+                  setMpSearchQuery(e.target.value);
+                  setFormData((prev) => ({ ...prev, mp_name: e.target.value }));
+                  setIsMpDropdownOpen(true);
+                  setActiveScenarioId(null);
+                }}
+                required
+                placeholder="Type MP Name or Constituency..."
+                style={{
+                  width: "100%",
+                  backgroundColor: "#131d33",
+                  border: "1px solid #38bdf8",
+                  borderRadius: "6px",
+                  padding: "0.55rem 0.75rem",
+                  color: "#f8fafc",
+                  outline: "none",
+                  fontWeight: 600
+                }}
+              />
+
+              {/* Suggestions Dropdown */}
+              {isMpDropdownOpen && (
+                <div style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: 0,
+                  right: 0,
+                  backgroundColor: "#0f172a",
+                  border: "1px solid #38bdf8",
+                  borderRadius: "6px",
+                  marginTop: "4px",
+                  maxHeight: "220px",
+                  overflowY: "auto",
+                  zIndex: 60,
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.6)"
+                }}>
+                  {filteredMps.length > 0 ? (
+                    filteredMps.map((mp) => (
+                      <div
+                        key={mp.id}
+                        onClick={() => handleSelectMp(mp)}
+                        style={{
+                          padding: "0.5rem 0.75rem",
+                          borderBottom: "1px solid #1e293b",
+                          cursor: "pointer",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          fontSize: "0.775rem",
+                          transition: "background-color 0.12s ease"
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1e293b")}
+                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+                      >
+                        <div>
+                          <div style={{ fontWeight: 700, color: "#f8fafc" }}>
+                            {mp.mp_name}
+                          </div>
+                          <div style={{ fontSize: "0.68rem", color: "#94a3b8" }}>
+                            {mp.constituency} • {mp.state}
+                          </div>
+                        </div>
+                        <CheckCircle2 size={13} color="#38bdf8" />
+                      </div>
+                    ))
+                  ) : (
+                    <div style={{ padding: "0.75rem", fontSize: "0.75rem", color: "#64748b", textAlign: "center" }}>
+                      No exact MoSPI match found.
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <div>
+              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
+                Work Category
+              </label>
+              <select
+                name="work_category"
+                value={formData.work_category}
+                onChange={handleInputChange}
+                required
+                style={{
+                  width: "100%",
+                  backgroundColor: "#131d33",
+                  border: "1px solid #1e293b",
+                  borderRadius: "6px",
+                  padding: "0.55rem 0.75rem",
+                  color: "#f8fafc",
+                  outline: "none"
+                }}
+              >
+                {WORK_CATEGORIES.map((cat) => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Row 3: Cascading State & District Dropdowns */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
             <div>
               <label style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.75rem", fontWeight: 600, color: "#38bdf8", marginBottom: "4px" }}>
@@ -326,57 +513,6 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             </div>
           </div>
 
-          {/* Row 3: MP Name & Work Category */}
-          <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "1rem" }}>
-            <div>
-              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
-                Hon'ble MP Name (MoSPI Verified)
-              </label>
-              <input
-                type="text"
-                name="mp_name"
-                value={formData.mp_name}
-                onChange={handleInputChange}
-                required
-                placeholder="e.g. AASHTIKAR PATIL NAGESH BAPURAO"
-                style={{
-                  width: "100%",
-                  backgroundColor: "#131d33",
-                  border: "1px solid #1e293b",
-                  borderRadius: "6px",
-                  padding: "0.55rem 0.75rem",
-                  color: "#f8fafc",
-                  outline: "none"
-                }}
-              />
-            </div>
-
-            <div>
-              <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, color: "#94a3b8", marginBottom: "4px" }}>
-                Work Category
-              </label>
-              <select
-                name="work_category"
-                value={formData.work_category}
-                onChange={handleInputChange}
-                required
-                style={{
-                  width: "100%",
-                  backgroundColor: "#131d33",
-                  border: "1px solid #1e293b",
-                  borderRadius: "6px",
-                  padding: "0.55rem 0.75rem",
-                  color: "#f8fafc",
-                  outline: "none"
-                }}
-              >
-                {WORK_CATEGORIES.map((cat) => (
-                  <option key={cat} value={cat}>{cat}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-
           {/* Row 4: Amount & Implementing Agency */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
             <div>
@@ -414,7 +550,7 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
                 value={formData.implementing_agency}
                 onChange={handleInputChange}
                 required
-                placeholder="e.g. Apex Infra Pvt Ltd or Contractor_37"
+                placeholder="e.g. Apex Infra Pvt Ltd or Contractor_11"
                 style={{
                   width: "100%",
                   backgroundColor: "#131d33",
@@ -428,7 +564,7 @@ export const SimulationForm: React.FC<SimulationFormProps> = ({
             </div>
           </div>
 
-          {/* Row 5: Optional Timeline & Delay Audit Dates (Task 2) */}
+          {/* Row 5: Optional Timeline & Delay Audit Dates */}
           <div style={{
             backgroundColor: "rgba(11, 17, 32, 0.6)",
             border: "1px solid #1e293b",

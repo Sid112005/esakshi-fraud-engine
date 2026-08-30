@@ -22,6 +22,38 @@ def load_data() -> pd.DataFrame:
         return df
     return pd.DataFrame()
 
+@analytics_router.get("/mp-list")
+def get_mp_list():
+    """
+    Returns official MoSPI verified MP names, constituencies, and states from data/esakshi.db
+    for frontend searchable combobox selection.
+    """
+    if not os.path.exists(DB_PATH):
+        return {"total_mps": 0, "mps": []}
+    
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT sr_no, mp_name, constituency, state, allocated_amount_inr FROM mp_allocations ORDER BY mp_name ASC;")
+    rows = cursor.fetchall()
+    conn.close()
+
+    mps = [
+        {
+            "id": row[0],
+            "mp_name": row[1],
+            "constituency": row[2],
+            "state": row[3],
+            "allocated_amount_inr": row[4]
+        }
+        for row in rows
+    ]
+
+    return {
+        "total_mps": len(mps),
+        "mps": mps
+    }
+
+
 @analytics_router.get("/scheme-trends")
 def get_scheme_trends(
     state: Optional[str] = Query(None, description="Filter by State"),
