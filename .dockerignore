@@ -1,0 +1,16 @@
+node_modules/
+frontend/
+dist/
+.git/
+.github/
+.gitignore
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.DS_Store
+tests/
