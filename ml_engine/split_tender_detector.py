@@ -46,7 +46,7 @@ class SplitTenderDetector:
 
     def __init__(
         self,
-        similarity_threshold: float = 0.85,
+        similarity_threshold: float = 0.80,
         window_days: int = 14,
         match_category: bool = True,
         match_agency: bool = False,
