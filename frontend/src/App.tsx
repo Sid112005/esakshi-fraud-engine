@@ -10,7 +10,7 @@ import type {
   RiskAssessmentResponse,
   AuditHistoryItem,
 } from "./types";
-import { DEFAULT_API_BASE_URL } from "./config";
+import { DEFAULT_API_BASE_URL, type UserRole } from "./config";
 import { ArrowLeft } from "lucide-react";
 
 export const App: React.FC = () => {
@@ -19,6 +19,11 @@ export const App: React.FC = () => {
   const [serverStatus, setServerStatus] = useState<"checking" | "online" | "offline">("checking");
   const [history, setHistory] = useState<AuditHistoryItem[]>([]);
   const [selectedHistoryItem, setSelectedHistoryItem] = useState<AuditHistoryItem | null>(null);
+
+  // Role & Jurisdiction State (Task 5)
+  const [userRole, setUserRole] = useState<UserRole>("MINISTRY");
+  const [selectedState, setSelectedState] = useState<string>("Maharashtra");
+  const [selectedDistrict, setSelectedDistrict] = useState<string>("All");
 
   // Poll backend health status
   const checkServerHealth = async () => {
@@ -62,6 +67,12 @@ export const App: React.FC = () => {
           setSelectedHistoryItem(null);
         }}
         historyCount={history.length}
+        userRole={userRole}
+        onRoleChange={(role) => setUserRole(role)}
+        selectedState={selectedState}
+        onStateChange={(st) => setSelectedState(st)}
+        selectedDistrict={selectedDistrict}
+        onDistrictChange={(dist) => setSelectedDistrict(dist)}
       />
 
       {/* Main Content Area */}
@@ -84,7 +95,12 @@ export const App: React.FC = () => {
         )}
 
         {activeTab === "dashboard" && (
-          <DashboardHome onGoToSimulation={() => setActiveTab("simulation")} />
+          <DashboardHome
+            onGoToSimulation={() => setActiveTab("simulation")}
+            userRole={userRole}
+            selectedState={selectedState}
+            selectedDistrict={selectedDistrict}
+          />
         )}
 
         {activeTab === "history" && (
