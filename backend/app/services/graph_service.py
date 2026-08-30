@@ -1,5 +1,9 @@
 import os
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
+
+# Load local .env variables
+load_dotenv()
 
 # Local or cloud Neo4j connection URI (Default local instance)
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
